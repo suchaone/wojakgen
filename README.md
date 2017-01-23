@@ -1,0 +1,2 @@
+# wojakgen
+generates wojaks
