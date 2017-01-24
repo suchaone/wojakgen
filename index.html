@@ -154,17 +154,19 @@
             'FRAME STORY that ADJECTIVE PERSON',
             'FRAME STORY that ADJECTIVE IDEOLOGY',
             'FRAME STORY that ADJECTIVE NATIONALITY',
+            'STORY his tulpa of CELEBRITY',
+            'STORY a clone of CELEBRITY',
+            'STORY a painting of CELEBRITY',
             'STORY some ADJECTIVE PERSON',
             'STORY some ADJECTIVE IDEOLOGY',
             'STORY some ADJECTIVE NATIONALITY',
             'TRAITLY TRAITADJ PERSON',
             'TRAITLY TRAITADJ NATIONALITY',
             'TRAITLY TRAITADJ IDEOLOGY',
-            'TRAITLY TRAITADJ CELEBRITY FAN',
+            'TRAITLY TRAITADJ CELEBRITY FAN'
           ];
           var form = pickRandom(forms);
           form = form.replace('OPINION', pickRandom(OPINION));
-          form = form.replace('OCCUPATION', pickRandom(OCCUPATION));
           form = form.replace('PLURAL', pickRandom(PLURAL));
           form = form.replace('VERY', pickRandom(VERY));
           form = form.replace('ADJECTIVE', pickRandom(ADJECTIVE));
@@ -176,6 +178,7 @@
           form = form.replace('PREFIX', pickRandom(PREFIX));
           form = form.replace('IDEOLOGY', pickRandom(IDEOLOGY));
           form = form.replace('CELEBRITY', pickRandom(CELEBRITY));
+          form = form.replace('OCCUPATION', pickRandom(OCCUPATION));
           form = form.replace('FAN', pickRandom(FAN));
           form = form.replace('FRAME', pickRandom(FRAME));
           form = form.replace('STORY', pickRandom(STORY));
@@ -258,6 +261,7 @@
 
         var images = new Map();
 
+        //images.set('bg',     new Array(35));
         images.set('base',   new Array(1));
         images.set('nose',   new Array(10));
         images.set('mouth',  new Array(9));
@@ -318,7 +322,10 @@
               return 0;
             if ((key == 'shirt') && Math.random() > 0.8)
               return 0;
-            draw(pickRandom(value), hairShift);
+            if ((key == 'hair') || (key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
+              draw(pickRandom(value), hairShift);
+            else
+              draw(pickRandom(value));
           });
         }
 
@@ -330,7 +337,8 @@
 
           ctx2.clearRect(0, 0, 100, 100);
           ctx2.drawImage(img, 0, 0);
-          randomHSL(ctx2, hairShift);
+          if (typeof hairShift !== 'undefined')
+            randomHSL(ctx2, hairShift);
           ctx.drawImage(canvas2, 0, 0);
         }
 
