@@ -46,7 +46,7 @@
 
         var NOUN = [ 'cat', 'dog', 'sheep', 'man', 'woman', 'ball', 'tree', 'lake', 'stick', 'rock', 'river', 'hat', 'shoe', 'staff', 'cloak', 'coin' ];
         var ADJECTIVE = [ 'deranged', 'deluded', 'uncanny', 'wayward', 'fiery', 'big', 'tiny', 'violent', 'lying', 'omnipresent', 'omniscient', 'fearful', 'brave', 'friendly', 'playful' ];
-        var NATIONALITY = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean' ];
+        var NATIONALITY = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'southerner', 'westerner' ];
 
         function makeTulpa (x, y) {
           var tulpa = {};
@@ -92,13 +92,13 @@
         }
 
         function randomAttribute() {
-          var OPINION = [ 'partial towards', 'likes', 'dislikes', 'does not care for', 'cares for', 'despises', 'fears', 'adores', 'abhors', 'often thinks about', 'rarely considers', 'inspired by', 'friendly towards', 'prefers the company of', 'uneasy around', 'triggered by', 'beats up', 'keeps a tab on', 'suspicious of', 'respects', 'looks up to', 'says "no" to', 'defender of', 'looks down on', 'pities', 'envious of', 'writes fan fiction about', 'writes about', 'writes poems about', 'dreams about', 'obsessed with', 'cannot cope with', 'placated by', 'soothed by', 'enraged by', 'ignores', 'can\'t ignore', 'meditates on', 'sings about', 'blogs about', 'has a blog about', 'tweets about', 'posts about', 'studies', 'adores', 'idolizes', 'disrespects', 'fawns over', 'talks to', 'faps to', 'laughs at', 'comfortable with', 'uncomfortable around', 'understands', 'does\'t understand', 'confused by', 'beguiled by', 'makes memes about', 'jokes about', 'won\'t stop talking about', 'whispers to', 'shrieks at', 'screams at', 'yells at', 'yells about', 'raves about', 'talks at', 'offended by', 'chortles at', 'giggles at', 'amused by', 'snorts at', 'sneers at', 'made peace with', 'prefers the company of', 'questions the existence of', 'believes in', 'not afraid of', 'says \'yes\' to', 'ambivalent towards', 'puzzled by', 'has a problem with', 'has no problem with', 'only likes', 'engages with', 'unfazed by', 'smiles at', 'can\'t resist', 'thirsts for', 'can\'t resist smiling at', 'stands up for', 'stands up to', 'has a theory about', 'theorizes about', 'still on the fence about', 'conspires against', 'believes in conspiracy theories about', 'lives for', 'only interested in', 'has views on', 'wrote a manifesto about', 'fetishizes', 'lost his faith in', 'still believes in', 'speaks on behalf of', 'has a pinterest board full of', 'can always count on', 'wrote a song about', 'wrote a poem about', 'writes thinkpieces about', 'wrote a thinkpiece about', 'worships', 'reveres', 'mocks', 'spits at', 'bites his thumb at', 'always at ease around', 'uneasy around', 'disgusted by', 'attracted to', 'complains about', 'wrote a php dissertation on', 'wrote a paper on', 'investigates' ];
-          var PLURAL = [ 'cats', 'dogs', 'sheep', 'spheres', 'trees', 'rocks', 'trains' , 'hats', 'shoes', 'bread', 'cushions', 'pokemon', 'cattle', 'memes', 'rhymes', 'monkeys', 'marmosets', 'tarsiers', 'books', 'stds', 'd&d rulebooks', 'miniatures', 'demiurges', 'gods', 'demons', 'angels', 'math textbooks', 'ears', 'feet', 'hands', 'nose hairs', 'spells', 'pebbles', 'memorabilia', 'stamps', 'faberge eggs', 'peaches', 'emoji', 'anime', 'newts', 'waves', 'tunes', 'stories', 'logs', 'atoms', 'particles', 'potions', 'scars', 'wheels', 'cogs', 'pipes', 'manifestos', 'archons', 'hamsters', 'birds', 'elders', 'voters', 'the people', 'platonic forms', 'dreams', 'visions', 'hallucinations', 'strategies', 'pugs', 'words', 'numbers', 'chords', 'violins', 'video games', 'runes', 'cyphers', 'riddles', 'stickers', 'thinkpieces', 'DRUG', 'hot takes', 'whips', 'narcotics', 'gondolas', 'pepes', 'tights', 'buts', 'bulges', 'you', 'mandolins', 'guitars', 'harmonicas', 'balalaikas', 'roman coins', 'propaganda', 'swag', 'pokemon cards', 'magic cards', 'tarot cards', 'data', 'asuras', 'devas', 'owls', 'screenplays', 'diet tips', 'chaos emeralds', 'tulpas', 'glyphs' ];
+          var OPINION = [ 'partial towards', 'likes', 'dislikes', 'does not care for', 'cares for', 'despises', 'fears', 'adores', 'abhors', 'often thinks about', 'rarely considers', 'inspired by', 'friendly towards', 'prefers the company of', 'uneasy around', 'triggered by', 'beats up', 'keeps a tab on', 'suspicious of', 'respects', 'looks up to', 'says "no" to', 'defender of', 'looks down on', 'pities', 'envious of', 'writes fan fiction about', 'writes about', 'writes poems about', 'dreams about', 'obsessed with', 'cannot cope with', 'placated by', 'soothed by', 'enraged by', 'ignores', 'can\'t ignore', 'meditates on', 'sings about', 'blogs about', 'has a blog about', 'tweets about', 'posts about', 'studies', 'adores', 'idolizes', 'disrespects', 'fawns over', 'talks to', 'faps to', 'laughs at', 'comfortable with', 'uncomfortable around', 'understands', 'does\'t understand', 'confused by', 'beguiled by', 'makes memes about', 'jokes about', 'won\'t stop talking about', 'whispers to', 'shrieks at', 'screams at', 'yells at', 'yells about', 'raves about', 'talks at', 'offended by', 'chortles at', 'giggles at', 'amused by', 'snorts at', 'sneers at', 'made peace with', 'prefers the company of', 'questions the existence of', 'believes in', 'not afraid of', 'says \'yes\' to', 'ambivalent towards', 'puzzled by', 'has a problem with', 'has no problem with', 'only likes', 'engages with', 'unfazed by', 'smiles at', 'can\'t resist', 'thirsts for', 'can\'t resist smiling at', 'stands up for', 'stands up to', 'has a theory about', 'theorizes about', 'still on the fence about', 'conspires against', 'believes in conspiracy theories about', 'lives for', 'only interested in', 'has views on', 'wrote a manifesto about', 'fetishizes', 'lost his faith in', 'still believes in', 'speaks on behalf of', 'has a pinterest board full of', 'can always count on', 'wrote a song about', 'wrote a poem about', 'writes thinkpieces about', 'wrote a thinkpiece about', 'worships', 'reveres', 'mocks', 'spits at', 'bites his thumb at', 'always at ease around', 'uneasy around', 'disgusted by', 'attracted to', 'complains about', 'wrote a phd dissertation on', 'wrote a paper on', 'investigates' ];
+          var PLURAL = [ 'cats', 'dogs', 'sheep', 'spheres', 'trees', 'rocks', 'trains' , 'hats', 'shoes', 'bread', 'cushions', 'pokemon', 'cattle', 'memes', 'rhymes', 'monkeys', 'marmosets', 'tarsiers', 'books', 'stds', 'd&d rulebooks', 'miniatures', 'gods', 'demons', 'angels', 'math textbooks', 'ears', 'feet', 'hands', 'nose hairs', 'spells', 'pebbles', 'memorabilia', 'stamps', 'faberge eggs', 'peaches', 'emoji', 'anime', 'newts', 'waves', 'tunes', 'stories', 'logs', 'atoms', 'particles', 'potions', 'scars', 'wheels', 'cogs', 'pipes', 'manifestos', 'archons', 'hamsters', 'birds', 'elders', 'voters', 'the people', 'platonic forms', 'dreams', 'visions', 'hallucinations', 'strategies', 'pugs', 'words', 'numbers', 'chords', 'violins', 'video games', 'runes', 'cyphers', 'riddles', 'stickers', 'thinkpieces', 'DRUG', 'hot takes', 'whips', 'narcotics', 'gondolas', 'pepes', 'tights', 'buts', 'bulges', 'mandolins', 'guitars', 'harmonicas', 'balalaikas', 'roman coins', 'propaganda', 'swag', 'pokemon cards', 'magic cards', 'tarot cards', 'data', 'asuras', 'devas', 'owls', 'screenplays', 'diet tips', 'chaos emeralds', 'tulpas', 'glyphs', 'bees', 'ants' ];
           var ADJECTIVE = [ 'friendly', 'benevolent', 'understanding', 'clever', 'rude', 'friendly', 'paranoid', 'anxious', 'neurotic', 'disgusting', 'abhorent', 'timid', 'lazy', 'autistic', 'irreverent', 'irritable', 'depressed', 'sad', 'emotional', 'nihilistic', 'hedonistic', 'vulgar', 'ironic', 'unironic', 'postironic', 'violent', 'anhedonic', 'promiscuous', 'cunning', 'bashful', 'prudish', 'well-dressed', 'soft-spoken', 'audacious', 'unruly', 'orderly', 'clean', 'respectful', 'clueless', 'dirty', 'shrewd', 'shril', 'loud', 'demented', 'misunderstood', 'deranged', 'deluded', 'fiery', 'sincere', 'sensitive', 'horny', 'broke', 'wise', 'educated', 'uneducated', 'wishful', 'cautious', 'obsessive', 'anonymous', 'famous', 'unapologetic', 'shameless', 'beautiful', 'handsome', 'glamorous', 'foxy', 'comely', 'cute', 'graceful','gorgeous', 'ravishing','noble', 'hideous', 'reclusive', 'reptilian', 'revolting', 'monstrous', 'belligerent', 'peaceful', 'combative', 'pretentious', 'flamboyant', 'sophomoric', 'patrician', 'masculine', 'feminine', 'alpha', 'beta', 'omega', 'TRAITLY TRAITADJ', 'worried', 'naive', 'ignorant', 'woke', 'swole', 'RELIGION', 'generous' ];
-          var PERSON = [ 'person', 'bloke', 'chap', 'lad', 'bro', 'fellow', 'fella', 'character', 'individual', 'citizen', 'boy', 'man', 'person', 'guy', 'soul', 'being', 'beast', 'creature', 'autist', 'madman', 'manchild', 'incel', 'volcel', 'solipsist', 'communist', 'anarchist', 'redditor', 'furry', 'larper', 'feminist', 'paleofeminist', 'male feminist', 'ally', 'white knight', 'prophet', 'otaku', 'singularian', 'apprentice', 'seer', 'bolshevik', 'nihilist', 'ally', 'addict', 'autocrat', 'racist', 'narcissist', 'masochist', 'sadist', 'librarian', 'fan', 'lolcow', 'hipster', 'normie', 'sophist', 'contrarian', 'goon', 'btard', 'poser', 'cat', 'bastard', 'gent', 'gentleman', 'mortal', 'male', 'adult', 'pessimist', 'optimist', 'sjw', 'fetishist', 'nympho', 'nomad', 'psychonaut', 'DRUGhead', 'DRUG user', 'subgenius', 'robot', 'fashionista', 'prole', 'pleb', 'raver', 'goth', 'hobo', 'DRUG addict', 'DRUG head', 'OCCUPATION', 'apologist' ];
-          var OCCUPATION = [ 'engineer', 'troll', 'NEET', 'designer', 'magician', 'mathematician', 'researcher', 'ironist', 'author', 'shitposter', 'scientist', 'astrologist', 'alchemist', 'sage', 'philosopher', 'rapper', 'spy', 'prostitute', 'sex worker', 'poet', 'retiree', 'software developer', 'barista', 'marine', 'cop', 'wizard', 'makeup artist', 'artist', 'janitor', 'guitarist', 'journalist', 'blogger', 'camwhore', 'thief', 'DRUG dealer', 'grifter', 'truck driver', 'mercenary', 'doctor', 'mechanic', 'translator', 'florist', 'thought leader', 'consultant', 'ux designer', 'digital nomad', 'professor', 'dj', 'hacker', 'clown', 'politician', 'lawyer', 'product manager', 'haberdasher', 'soprano', 'educator', 'pedagogue', 'technocrat', 'startup founder', 'vp of PLURAL', 'director of PLURAL', 'master of PLURAL', 'necromancer', 'priest', 'druid', 'monk', 'occultist', 'blogger', 'vlogger' ];
-          var PREFIX = [ 'hyper', 'uber', 'meta', 'paleo', 'anarcho', 'xeno', 'post', 'anti', 'geo', 'neo', 'reconstructionist ', 'liberal ', 'conservative ', 'ultra', 'eco', 'crypto', 'reactionary ', 'revisionist ', 'queer ', 'radical ', 'moderate ', 'cyber' ];
-          var IDEOLOGY = [ 'communist', 'capitalist', 'feminist', 'maoist', 'stalinist', 'primitivist', 'syndicalist', 'collectivist', 'egoist', 'platonist', 'realist', 'syndicalist','rationalist', 'modernist', 'singularian', 'fascist', 'natalist', 'naturist', 'democrat', 'conservative', 'liberal', 'nationalist', 'agrarian', 'federalist', 'isolationist', 'monarchist', 'libertarian', 'environmentalist', 'meninist', 'masculinist', 'progressivist', 'republican', 'socialist', 'islamist', 'zionist', 'radicalist', 'baathist', 'nasserist', 'arabist', 'jihadist', 'voluntarist' ];
+          var PERSON = [ 'person', 'bloke', 'chap', 'lad', 'bro', 'fellow', 'fella', 'character', 'individual', 'citizen', 'boy', 'man', 'person', 'guy', 'soul', 'being', 'beast', 'creature', 'autist', 'madman', 'manchild', 'incel', 'volcel', 'solipsist', 'communist', 'anarchist', 'redditor', 'furry', 'larper', 'feminist', 'paleofeminist', 'male feminist', 'ally', 'white knight', 'prophet', 'otaku', 'singularian', 'apprentice', 'seer', 'bolshevik', 'nihilist', 'ally', 'addict', 'autocrat', 'racist', 'narcissist', 'masochist', 'sadist', 'librarian', 'fan', 'lolcow', 'hipster', 'normie', 'sophist', 'contrarian', 'goon', 'btard', 'poser', 'cat', 'bastard', 'gent', 'gentleman', 'mortal', 'male', 'adult', 'pessimist', 'optimist', 'sjw', 'fetishist', 'nympho', 'nomad', 'psychonaut', 'DRUGhead', 'DRUG user', 'subgenius', 'robot', 'fashionista', 'prole', 'pleb', 'raver', 'goth', 'hobo', 'DRUG addict', 'DRUGhead', 'OCCUPATION', 'apologist', 'fuckboy' ];
+          var OCCUPATION = [ 'engineer', 'troll', 'NEET', 'designer', 'magician', 'mathematician', 'researcher', 'ironist', 'author', 'shitposter', 'scientist', 'astrologist', 'alchemist', 'sage', 'philosopher', 'rapper', 'spy', 'prostitute', 'sex worker', 'poet', 'retiree', 'software developer', 'barista', 'marine', 'cop', 'wizard', 'makeup artist', 'artist', 'janitor', 'guitarist', 'journalist', 'blogger', 'camwhore', 'thief', 'DRUG dealer', 'grifter', 'truck driver', 'mercenary', 'doctor', 'mechanic', 'translator', 'florist', 'thought leader', 'consultant', 'ux designer', 'digital nomad', 'professor', 'dj', 'hacker', 'clown', 'politician', 'lawyer', 'product manager', 'haberdasher', 'soprano', 'educator', 'pedagogue', 'technocrat', 'startup founder', 'vp of PLURAL', 'director of PLURAL', 'master of PLURAL', 'necromancer', 'priest', 'druid', 'monk', 'occultist', 'blogger', 'vlogger', 'seasteader', 'venture capitalist', 'VIDYA player', 'playwright', 'linguist', 'pornstar', 'escort' ];
+          var PREFIX = [ 'hyper', 'uber', 'meta', 'paleo', 'anarcho', 'xeno', 'post', 'anti', 'geo', 'neo', 'reconstructionist ', 'liberal ', 'conservative ', 'ultra', 'eco', 'crypto', 'reactionary ', 'revisionist ', 'queer ', 'radical ', 'moderate ', 'cyber', 'intersectionalist ', 'esoteric ' ];
+          var IDEOLOGY = [ 'communist', 'capitalist', 'feminist', 'maoist', 'stalinist', 'primitivist', 'syndicalist', 'collectivist', 'egoist', 'platonist', 'realist', 'syndicalist','rationalist', 'modernist', 'singularian', 'fascist', 'natalist', 'naturist', 'democrat', 'conservative', 'liberal', 'nationalist', 'agrarian', 'federalist', 'isolationist', 'monarchist', 'libertarian', 'environmentalist', 'meninist', 'masculinist', 'progressivist', 'republican', 'socialist', 'islamist', 'zionist', 'radicalist', 'baathist', 'nasserist', 'arabist', 'jihadist', 'voluntarist', 'nazi' ];
           var CELEBRITY = [ 'stirner', 'zizek', 'dawkins', 'marx', 'trotsky', 'mao', 'cher', 'beyonce', 'kanye', 'kim kardashian', 'dril', 'stirner', 'nietzsche', 'plato', 'spinoza', 'kant', 'hagel', 'obama', 'trump', 'kissinger', 'putin', 'harambe', 'trudeau', 'stalin', 'lenin', 'kurzweil', 'thiel', 'yudkowsky', 'dhh', 'steve jobs', 'stallman', 'herzl', 'arafat', 'hillary', 'oprah', 'bjork', 'bowie', 'kierkegaard', 'murakami', 'manson', 'kaczynski', 'foucault', 'goethe', 'derrida', 'adam sandler', 'bill cosby', 'bernie sanders', 'ron paul', 'pkd', 'weev', 'milo' ];
           var VERY = [ 'very', 'fiercely', 'zealously', 'rather', 'singularly', 'distinctly', 'relatively', 'darn', 'mighty', 'devilishly', 'remarkably', 'highly', 'vaguely', 'faintly' ];
           var WRT = [ 'when it comes to', 'with regard to', 'around' ];
@@ -106,13 +106,16 @@
           var PEOPLE = [ 'fascists', 'communists', 'redditors', 'sjws', 'anarchists', 'incels', 'volcels', 'pokemon', 'furries', 'men', 'women', 'druids', 'magi', 'thieves', 'rascals', 'trolls', 'autists', 'feminists', 'shitposters', 'twitter users', 'thots', 'tinder users', 'redditors', 'btards', 'progs', 'crowds', 'DRUGheads', 'DRUG users', 'politicians', 'mansplainers', 'manspreaders', 'friends', 'ghosts', 'ghouls', 'skeletons', 'the undead', 'spooks', 'bros', 'dudebros', 'fuckboys', 'fashionistas', 'wizards', 'witches', 'warlocks', 'magicians', 'sorcerers', 'barbarians', 'sex workers', 'prostitutes', 'camwhores', 'lolcows', 'maidens', 'dames', 'qts', 'monstergirls', 'hippies', 'sluts', 'crossfit enthusiasts' ];
           var COMMON = [ 'your average', 'a common', 'just an ordinary', 'an ordinary', 'a garden variety', 'a retired', 'a burnt-out', 'a washed-out', 'your friendly neighborhood', 'not that kind of' ]
           var FRAME = [ 'always blogs about the time he', 'always tweets about how he', 'keeps talking about the time he', 'fondly remembers the time he', 'can\'t forget the time he', 'hasn\'t been the same since he', 'changed when he', 'forgets that he', 'blocked out the time that he', 'denies that he', 'proud that he', 'ashamed that he', 'not ashamed that he' ];
-          var STORY = [ 'befriended', 'fought', 'punched', 'made love to', 'kissed', 'yelled at', 'was seduced by', 'was fooled by', 'was tricked into dating', 'dated', 'slapped', 'encountered', 'spoke to', 'was yelled at by', 'was lectured by', 'was educated by', 'had a heart-to-heart with', 'married', 'dated', 'divorced', 'broke up with', 'ran away from', 'ignored', 'loved', 'had a crush on', 'teamed up with', 'worked with', 'played with', 'talked to', 'laughted at', 'dreamed about', 'larped with', 'ran with', 'converted', 'won over', 'was won over by', 'made a deal with', 'slept with', 'rejected', 'interviewed', 'played VIDYA with', 'gaslighted', 'was gaslighted by' ];
-          var DRUG = [ 'pot', 'meth', 'crack', 'coke', 'smack' ];
+          var STORY = [ 'befriended', 'fought', 'punched', 'made love to', 'kissed', 'yelled at', 'was seduced by', 'was fooled by', 'was tricked into dating', 'dated', 'slapped', 'encountered', 'spoke to', 'was yelled at by', 'was lectured by', 'was educated by', 'had a heart-to-heart with', 'married', 'dated', 'divorced', 'broke up with', 'ran away from', 'ignored', 'loved', 'had a crush on', 'teamed up with', 'worked with', 'played with', 'talked to', 'laughted at', 'dreamed about', 'larped with', 'ran with', 'converted', 'won over', 'was won over by', 'made a deal with', 'slept with', 'rejected', 'interviewed', 'played VIDYA with', 'gaslighted', 'was gaslighted by', 'fucked', 'was fucked by', 'seduced', 'was seduced by', 'flirted with', 'winked at', 'barked at' ];
+          var DRUG = [ 'pot', 'meth', 'crack', 'coke', 'smack', 'skooma' ];
           var TRAITLY = [ 'existentially', 'physically', 'mentally', 'linguistically', 'psychically', 'emotionally', 'spiritually', 'sexually', 'artistically', 'musically', 'mathematically', 'epistemically', 'ideologically', 'socially' ];
           var TRAITADJ = [ 'challenged', 'gifted', 'inclined', 'driven', 'advanced', 'stunted', 'flexible', 'rigid', 'liberal', 'conservative', 'retarded' ];
           var VIDYA = [ 'heroes of might and magic', 'pokemon', 'mario', 'mortal kombat', 'zelda', 'sim city', 'minecraft', 'civ3', 'dota', 'league', 'starcraft', 'diablo', 'quake', 'tic-tac-toe', 'd&d', 'undertale', 'portal', 'overwatch', 'warcraft', 'everquest', 'street fighter', 'contra', 'donkey kong', 'pong', 'halo', 'counter-strike', 'red alert' ];
           var RELIGION = [ 'christian', 'jewish', 'zoroastrian', 'animist', 'atheist', 'agnostic', 'hindu', 'orthodox', 'catholic', 'protestant', 'baptist' ];
           var XLY = [ 'gently', 'anxiously', 'ironically', 'unironically', 'exclusively', 'angrily', 'calmly', 'peacefully', 'expertly', 'ineptly', 'competently', 'incompetently', 'lazily', 'begrudgingly', 'professionally', 'religiously', 'occasionally', 'competitively', 'aggressively' ];
+          var WORK = [ 'works', 'plays', 'hangs out', 'meets PEOPLE', 'trolls PEOPLE', 'flirts with PEOPLE', 'bullies PEOPLE', 'chills', 'is only truly himself', 'writes songs about life', 'blogs about life', 'tweets about life', 'lives' ];
+          var PLACE = [ 'online', 'in world of warcraft', 'on twitter', 'on facebook', 'in starbucks', 'in the basement', 'at the gym', 'on the street', 'on myspace', 'on google plus', 'on reddit', 'in second life', 'in furcadia', 'on somethingawful' ];
+          var CLONE = [ 'a clone of', 'his tulpa of', 'a ghola of', 'a painting of', 'a hologram of', 'a simulation of', 'a strawman of', 'a puppet modelled after', 'a guy dressed up as' ];
 
           var forms = [
             'OPINION PLURAL',
@@ -154,25 +157,26 @@
             'FRAME STORY that ADJECTIVE PERSON',
             'FRAME STORY that ADJECTIVE IDEOLOGY',
             'FRAME STORY that ADJECTIVE NATIONALITY',
-            'STORY his tulpa of CELEBRITY',
-            'STORY a clone of CELEBRITY',
-            'STORY a painting of CELEBRITY',
-            'STORY some ADJECTIVE PERSON',
-            'STORY some ADJECTIVE IDEOLOGY',
-            'STORY some ADJECTIVE NATIONALITY',
+            'STORY CLONE of CELEBRITY',
+            'STORY a VERY ADJECTIVE PERSON PLACE',
+            'STORY a VERY ADJECTIVE IDEOLOGY PLACE',
+            'STORY a VERY ADJECTIVE NATIONALITY PLACE',
             'TRAITLY TRAITADJ PERSON',
             'TRAITLY TRAITADJ ' + nationality,
             'TRAITLY TRAITADJ IDEOLOGY',
-            'TRAITLY TRAITADJ CELEBRITY FAN'
+            'TRAITLY TRAITADJ CELEBRITY FAN',
+            'WORK PLACE',
           ];
           var form = pickRandom(forms);
           form = form.replace('OPINION', pickRandom(OPINION));
+          form = form.replace('PERSON', pickRandom(PERSON));
           form = form.replace('OCCUPATION', pickRandom(OCCUPATION));
           form = form.replace('PLURAL', pickRandom(PLURAL));
           form = form.replace('VERY', pickRandom(VERY));
           form = form.replace('ADJECTIVE', pickRandom(ADJECTIVE));
-          form = form.replace('PERSON', pickRandom(PERSON));
           form = form.replace('WRT', pickRandom(WRT));
+          form = form.replace('PLACE', pickRandom(PLACE));
+          form = form.replace('WORK', pickRandom(WORK));
           form = form.replace('PEOPLE', pickRandom(PEOPLE));
           form = form.replace('COMMON', pickRandom(COMMON));
           form = form.replace('NATIONALITY', pickRandom(NATIONALITY));
@@ -188,6 +192,7 @@
           form = form.replace('VIDYA', pickRandom(VIDYA));
           form = form.replace('XLY', pickRandom(XLY));
           form = form.replace('RELIGION', pickRandom(RELIGION));
+          form = form.replace('CLONE', pickRandom(CLONE));
           form = form.replace('liberal liberal', 'liberal');
           form = form.replace('conservative conservative', 'conservative');
           return form;
@@ -202,12 +207,10 @@
         } 
 
         function randomName (nationality) {
-          var epithets = [ "wise", "doctor", "holy", "humble", "blissful", "great", "magnificent", "red", "black", "white", "bold", "craven", "foolish", "fierce", "arrogant", "timid", "blasphemous", "sexy", "lonely", "freaky", "dreamy", "zealous", "naughty", "enlightened", "sad", "oblivious", "confused", "arrogant", "cocky", "imaginative", "creative" ];
           var vowels = "aaaaaeeeeeeiiiooouuu";
           var consonants = "bbcddfghhjklmnprstvxzwwy";
           var name = "";
           var surname = "";
-          var epithet = "";
 
           for (var i = 0; i < Math.random() * 4; i++) {
             name += pickRandom(consonants);
@@ -246,16 +249,8 @@
 
           name = name[0].toUpperCase() + name.slice(1);
           surname = surname[0].toUpperCase() + surname.slice(1);
-          epithet = pickRandom(epithets);
-          epithet = epithet[0].toUpperCase() + epithet.slice(1);
 
-
-          if (Math.random() > 0.7)
-            return epithet + " " + name + " " + surname;
-          else if (Math.random() > 0.7)
-            return name + " " + surname + " the " + epithet;
-          else
-            return name + " " + surname;
+          return name + " " + surname;
         }
 
         function makePoint (x, y) {
