@@ -164,9 +164,6 @@
             'ADJECTIVE CELEBRITY FAN',
             'IDEOLOGY CELEBRITY FAN',
             'ADJECTIVE CELEBRITY FAN',
-            'FRAME STORY that ADJECTIVE PERSON',
-            'FRAME STORY that ADJECTIVE IDEOLOGY',
-            'FRAME STORY that ADJECTIVE NATIONALITY',
             'STORY CLONE CELEBRITY',
             'STORY a VERY ADJECTIVE PERSON PLACE',
             'STORY a VERY ADJECTIVE IDEOLOGY PLACE',
@@ -184,6 +181,11 @@
             'OPINION his pet BEAST',
             'WORK PLACE'
           ];
+
+          //'FRAME STORY that ADJECTIVE PERSON',
+          //'FRAME STORY that ADJECTIVE IDEOLOGY',
+          //'FRAME STORY that ADJECTIVE NATIONALITY',
+
           var form = pickRandom(forms);
           form = form.replace('OPINION', pickRandom(OPINION));
           form = form.replace('PERSON', pickRandom(PERSON));
