@@ -125,6 +125,7 @@
           var XLY = [ 'gently', 'anxiously', 'ironically', 'unironically', 'exclusively', 'angrily', 'calmly', 'peacefully', 'expertly', 'ineptly', 'competently', 'incompetently', 'lazily', 'begrudgingly', 'professionally', 'religiously', 'occasionally', 'competitively', 'aggressively' ];
           var WORK = [ 'works', 'plays', 'hangs out', 'meets PEOPLE', 'trolls PEOPLE', 'flirts with PEOPLE', 'bullies PEOPLE', 'chills', 'is only truly himself', 'writes songs about life', 'blogs about life', 'tweets about life', 'lives' ];
           var PLACE = [ 'online', 'in world of warcraft', 'on twitter', 'on facebook', 'in starbucks', 'in the basement', 'at the gym', 'on the street', 'on myspace', 'on google plus', 'on reddit', 'in second life', 'in furcadia', 'on somethingawful' ];
+          var COAT = [ 'coat', 'shirt', 'frock', 'robe', 'jacket', 'polo', 'onesie', 'tunic', 'cardigan', 'cape', 'suit', 'poncho', 'mask', 'robe', 'vest', 'apron' ];
           var CLONE = [ 'a clone of', 'his tulpa of', 'a ghola of', 'a painting of', 'a hologram of', 'a simulation of', 'a strawman of', 'a puppet modelled after', 'a guy dressed up as' ];
 
           var forms = [
@@ -181,6 +182,10 @@
             'OPINION his BEAST fursona',
             'OPINION his pet BEAST',
             'his ADJECTIVE pet BEAST is his only friend',
+            'more BEAST than man',
+            'looks like a BEAST',
+            'a BEAST in bed',
+            'wears a BEAST skin COAT',
             'WORK PLACE'
           ];
 
@@ -215,6 +220,7 @@
           form = form.replace('RELIGION', pickRandom(RELIGION));
           form = form.replace('BEAST', pickRandom(BEAST));
           form = form.replace('CLONE', pickRandom(CLONE));
+          form = form.replace('COAT', pickRandom(COAT));
           form = form.replace('liberal liberal', 'liberal');
           form = form.replace('conservative conservative', 'conservative');
           if (gender === 'female') {
@@ -280,7 +286,7 @@
             surname = russifySurname(surname);
           } else if (typeof nationality !== 'undefined' && (nationality === 'german' || nationality === 'bavarian')) {
             name = pickRandom(['jan', 'jannik', 'stefan', 'jorg', 'klaus', 'peter', 'gunter', 'hans', 'wolfgang', 'heinz', 'herbert', 'karl', 'ernst', 'friedrich', 'wilhelm', 'otto']);
-            surname = pickRandom(['muller', 'schmidt', 'schneider', 'fischer', 'weber', 'meyer', 'wagner', 'becker', 'schulz', 'hoffman', 'schafer', 'koch', 'bauer', 'richter', 'klein', 'wolf', 'schoder', 'neumann', 'schwartz', 'zimmerman', 'braun', 'kruger', 'lange', 'schmitt', 'krause', 'lehmann']);
+            surname = pickRandom(['muller', 'schmidt', 'schneider', 'fischer', 'weber', 'meyer', 'wagner', 'becker', 'schulz', 'hoffman', 'schafer', 'koch', 'bauer', 'richter', 'klein', 'wolf', 'schoder', 'neumann', 'schwartz', 'zimmerman', 'braun', 'kruger', 'lange', 'schmitt', 'krause', 'lehmann', 'stirner']);
           } else if (typeof nationality !== 'undefined' && (nationality === 'algerian' || nationality === 'arab' || nationality === 'palestian' )) {
             name = pickRandom(['abbas', 'abdul', 'abid', 'amir', 'arif', 'aziz', 'bakr', 'bashir', 'falah', 'faisal', 'habib', 'ibrahim', 'ismail', 'ilias', 'kazim', 'muhammad', 'mustafa', 'nadir', 'nasir', 'sahir', 'talib', 'nasim', 'yasir']);
             if (Math.random() > .3)
