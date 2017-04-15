@@ -167,9 +167,9 @@
             'IDEOLOGY CELEBRITY FAN',
             'ADJECTIVE CELEBRITY FAN',
             'STORY CLONE CELEBRITY',
-            'STORY a VERY ADJECTIVE PERSON',
-            'STORY a VERY ADJECTIVE IDEOLOGY',
-            'STORY a VERY ADJECTIVE NATIONALITY',
+            'STORY a ADJECTIVE PERSON',
+            'STORY a ADJECTIVE IDEOLOGY',
+            'STORY a ADJECTIVE NATIONALITY',
             'TRAITLY TRAITADJ PERSON',
             'TRAITLY TRAITADJ ' + nationality,
             'TRAITLY TRAITADJ IDEOLOGY',
@@ -226,6 +226,7 @@
           form = form.replace('CLONE', pickRandom(CLONE));
           form = form.replace('liberal liberal', 'liberal');
           form = form.replace('conservative conservative', 'conservative');
+          form = form.replace(/a (?=[aeiou])/,'an ');
           if (gender === 'female') {
             form = form.replace(' his ', ' her '); //todo: all instances
             form = form.replace(' he ', ' she '); //todo: all instances
