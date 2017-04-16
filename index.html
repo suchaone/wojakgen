@@ -128,6 +128,7 @@
           var CLONE = [ 'a clone of', 'his tulpa of', 'a ghola of', 'a painting of', 'a hologram of', 'a simulation of', 'a strawman of', 'a puppet modelled after', 'a guy dressed up as' ];
           var FABRIC = [ 'wool', 'cotton', 'silk', 'sheer silk', 'merino wool', 'leather', 'pleather', 'latex', 'rubber', 'spandex', 'BEAST hide', 'BEAST skin', 'fur', 'denim', 'gore-tex', 'lace', 'burlap', 'canvas', 'cashmere', 'chino', 'chiffon', 'felt', 'fishnet', 'flannel', 'satin', 'mesh' ];
           var SHIRT = [ 'shirt', 'vest', 'cape', 'onesie', 'leotard', 'coat', 'cloak', 'tuxedo', 'jacket', 'frock', 'robe', 'polo', 'onesie', 'tunic', 'cardigan', 'suit', 'poncho', 'mask', 'robe', 'vest', 'apron' ];
+          var FOOD = [ 'lasagna', 'pizza', 'cheesecake', 'cheese steaks', 'burgers', 'fries', 'sushi', 'soba', 'udon', 'ramen', 'oatmeal', 'gruel', 'oats', 'cereal', 'corn flakes', 'steak', 'caviar', 'mac and cheese', 'chorizo', 'tacos', 'burritos', 'churros', 'doughnuts', 'pasta', 'paella', 'beef patties', 'cheese', 'mozzarella', 'spice', 'nachos', 'dumplings', 'wontons', 'chicken soup', 'pho', 'eel', 'chicken', 'beef', 'mutton', 'roast BEAST', 'BEAST jerky', 'minced BEAST', 'fried BEAST' ];
           
           var forms = [
             'OPINION PLURAL',
@@ -181,7 +182,7 @@
             'administers DRUG to BEASTs',
             'sells DRUG to PEOPLE',
             'cooks BEASTs for PEOPLE',
-            'OPINION his BEAST fursona',
+            'has a BEAST fursona',
             'OPINION his pet BEAST',
             'his ADJECTIVE pet BEAST is his only friend',
             'more BEAST than man',
@@ -189,7 +190,11 @@
             'a BEAST in bed',
             'WORK PLACE',
             'XLY wears FABRIC',
-            'XLY wears FABRIC SHIRTs'
+            'XLY wears FABRIC SHIRTs',
+            'XLY eats FOOD',
+            'eats FOOD with PEOPLE',
+            'feeds FOOD to PEOPLE',
+            'cooks FOOD for PEOPLE'
           ];
 
           //'FRAME STORY that ADJECTIVE PERSON',
@@ -222,6 +227,7 @@
           form = form.replace('XLY', pickRandom(XLY));
           form = form.replace('RELIGION', pickRandom(RELIGION));
           form = form.replace('FABRIC', pickRandom(FABRIC));
+          form = form.replace('FOOD', pickRandom(FOOD));
           form = form.replace('BEAST', pickRandom(BEAST));
           form = form.replace('SHIRT', pickRandom(SHIRT));
           form = form.replace('CLONE', pickRandom(CLONE));
