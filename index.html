@@ -227,7 +227,7 @@
           form = form.replace('CLONE', pickRandom(CLONE));
           form = form.replace('liberal liberal', 'liberal');
           form = form.replace('conservative conservative', 'conservative');
-          form = form.replace(/ a (?=[aeiou])/,'an ');
+          form = form.replace(/ a (?=[aeiou])/,' an ');
           form = form.replace(/^a (?=[aeiou])/,'an ');
           if (gender === 'female') {
             form = form.replace(' his ', ' her '); //todo: all instances
