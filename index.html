@@ -139,6 +139,7 @@
           var MILLNESS = [ 'bipolar', 'schizo', 'depressive', 'autistic', 'aspie', 'ocd', 'alcoholic', 'bulimic', 'dyslexic', 'masochist', 'sadist' ];
           var ITEM = [ 'GEM BEAST', 'FABRIC bound journal', 'FABRIC bound RELIGION bible', 'FABRIC bound spellbook', 'SHIRT', 'GEM encrusted SHIRT', 'GEM necklace', 'GEM bracelet', 'GEM pin in the shape of a BEAST', 'GEM snuff bottle adorned with BEASTs', 'BEAST sculpture', 'carved GEM', 'unpolished GEM', 'GEM encrusted idol', 'GEM tooth', 'GEM ring', 'GEM earring', 'IDEOLOGY manifesto', 'RELIGION IDEOLOGY manifesto', 'notebook', 'pen', 'pencil', 'FABRIC wallet', 'FABRIC hat', 'FABRIC glove', 'FABRIC mask', 'FABRIC slipper', 'FABRIC sash', 'FABRIC belt', 'GEM medallion', 'NATIONALITY cookbook', 'NATIONALITY flag', 'NATIONALITY costume', 'FABRIC strap', 'painting of CELEBRITY', 'sketch of CELEBRITY' ];
           var GEM = [ 'jade', 'ruby', 'diamond', 'sapphire', 'glass', 'pearl', 'amethyst', 'malachite', 'sapphire', 'garnet', 'red jade', 'onyx', 'crystal', 'emerald', 'chalk', 'opal', 'garnet', 'plastic', 'topaz', 'bone', 'ivory', 'ebony' ];
+          var BOSS = [ 'oligarch', 'merchant', 'gangster', 'celebrity', 'politician', 'diplomat', 'ambassador', 'professor', 'admiral', 'general', 'priest' ];
           
           var forms = [
             'OPINION PLURAL',
@@ -183,6 +184,7 @@
             'STORY a ADJECTIVE PERSON',
             'STORY a ADJECTIVE IDEOLOGY',
             'STORY a ADJECTIVE NATIONALITY',
+            'STORY a ADJECTIVE NATIONALITY BOSS',
             'TRAITLY TRAITADJ PERSON',
             'TRAITLY TRAITADJ ' + nationality,
             'TRAITLY TRAITADJ IDEOLOGY',
@@ -239,6 +241,7 @@
             'stole a ITEM', 
             'survived a BEAST attack', 
             'stole a ITEM from a NATIONALITY', 
+            'stole a ITEM from a NATIONALITY BOSS', 
             'bought a ITEM from a NATIONALITY', 
             'OPINION a ITEM', 
             'doesn\'t like to ACTIVITY', 
@@ -296,6 +299,7 @@
             form = form.replace('ITEM', pickRandom(ITEM));
             form = form.replace('DATESITE', pickRandom(DATESITE));
             form = form.replace('ACTIVITY', pickRandom(ACTIVITY));
+            form = form.replace('BOSS', pickRandom(BOSS));
             form = form.replace('liberal liberal', 'liberal');
             form = form.replace('conservative conservative', 'conservative');
             form = form.replace(/ a (?=[aeiou])/,' an ');
