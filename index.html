@@ -55,7 +55,7 @@
 
         var NOUN = [ 'cat', 'dog', 'sheep', 'man', 'woman', 'ball', 'tree', 'lake', 'stick', 'rock', 'river', 'hat', 'shoe', 'staff', 'cloak', 'coin' ];
         var ADJECTIVE = [ 'deranged', 'deluded', 'uncanny', 'wayward', 'fiery', 'big', 'tiny', 'violent', 'lying', 'omnipresent', 'omniscient', 'fearful', 'brave', 'friendly', 'playful' ];
-        var NATIONALITY = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black' ];
+        var NATIONALITY = [ 'canadian', 'all american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black' ];
 
         function makeTulpa (x, y) {
           var tulpa = {};
@@ -329,7 +329,7 @@
           } else if (typeof nationality !== 'undefined' && (nationality === 'korean' )) {
             name = pickRandom(['jun', 'jung-hoon', 'sung-ho', 'joon-ho', 'sang-hoon' ]);
             surname = pickRandom(['kim', 'pak', 'yi', 'ri', 'chong', 'cho', 'kang', 'chang', 'yung', 'han', 'so', 'song', 'chu', 'kwak', 'ki']);
-          } else if (typeof nationality !== 'undefined' && (nationality === 'american' || nationality === 'brit' || nationality === 'canadian' || nationality === 'australian')) {
+          } else if (typeof nationality !== 'undefined' && (nationality === 'all american' || nationality === 'brit' || nationality === 'canadian' || nationality === 'australian')) {
             if (gender === 'male')
               name = pickRandom(['james', 'john', 'robert', 'michael', 'david', 'richard', 'daniel', 'paul', 'mark', 'donald', 'george', 'steve', 'jecff', 'larry', 'josh', 'dennis', 'carl', 'harold', 'doug', 'joe', 'justin', 'harry', 'bruce', 'aaron', 'jesse', 'craig', 'leonard', 'stanley', 'nate', 'alex', 'leo', 'tim', 'zack', 'brad', 'neil', 'jim', 'bob', 'bobby', 'xander', 'ethan', 'adam', 'baxter', 'caleb', 'matt', 'robert', 'robin', 'gabriel', 'gabe', 'ray', 'raymond', 'phil', 'toby', 'bart', 'arlo', 'abel', 'ace', 'adir', 'aidan', 'aiden', 'al', 'alvin', 'andre', 'ansel', 'anthony', 'tony', 'antoine', 'aric', 'arnie', 'arnold', 'arthur', 'austin', 'barney', 'barry', 'benjamin', 'ben', 'brandon', 'brent', 'chad', 'bryan', 'buster', 'calvin', 'casey', 'cecil', 'cedric', 'chase', 'chandler', 'charlie', 'chip', 'chris', 'christopher', 'claude', 'cletus', 'cliff', 'cody', 'cyril', 'cyrus', 'damion', 'dan', 'darcy', 'darian', 'darren', 'daryl', 'dean', 'shawn', 'dominic', 'douggie', 'drew', 'dudley', 'dustin', 'ed', 'dylan', 'elliot', 'zeke' ]);
             else
@@ -397,7 +397,7 @@
           if (Math.random() > 0.5)
             nationality = pickRandom(NATIONALITY); // todo shouldn't be global
           else
-            nationality = 'american';
+            nationality = 'all american';
 
           // this results in too many pocs; will adjust later
           poc = (nationality === 'african american' || nationality === 'black' || nationality === 'uzbek' || nationality === 'algerian' || nationality === 'armenian' || nationality === 'filipino' || nationality === 'greek' || nationality === 'mongol' || nationality === 'spaniard' || nationality === 'turk' || nationality === 'arab' || nationality === 'palestinian' || nationality === 'armenian' || nationality === 'aramean' || nationality === 'gypsy' || nationality === 'cuban' || nationality === 'mexican' || nationality === 'colombian');
