@@ -135,6 +135,7 @@
           var FIELD = [ 'archeology', 'anthropology', 'psychology', 'physics', 'chemistry', 'engineering', 'mathematics', 'literature', 'poetry', 'astrology', 'history', 'linguistics', 'law', 'geography', 'economics', 'ecology', 'oceanography', 'geology', 'biology', 'zoology', 'botany', 'logic', 'statistics' ];
           var DATESITE = ['okcupid', 'tinder', 'grindr', 'pof', 'eharmony', 'lavalife', 'jdate', 'match dot com', 'badoo'  ];
           var DEGREE = [ 'FIELD', 'marxist FIELD', 'feminist FIELD', 'queer FIELD', 'organic FIELD', 'cyberFIELD', 'NATIONALITY FIELD', 'RELIGION FIELD', 'RELIGION ethics', 'RELIGION epistemology', 'RELIGION mythology', 'RELIGION history', 'RELIGION metaphysics', 'RELIGION theology', 'RELIGION logic' ];
+          var ACTIVITY = [ 'pop pimples', 'eat FOOD', 'read NATIONALITY lit', 'read NATIONALITY literature', 'read NATIONALITY propaganda', 'read NATIONALITY poetry', 'read LITERATURE scripture', 'listen to NATIONALITY MUSIC', 'wear FABRIC SHIRTs', 'sail', 'flirt', 'fuck', 'pick up HUMANS' ];
           var MILLNESS = [ 'bipolar', 'schizo', 'depressive', 'autistic', 'aspie', 'ocd', 'alcoholic', 'bulimic', 'dyslexic', 'masochist', 'sadist' ];
           
           var forms = [
@@ -226,6 +227,10 @@
             'meets HUMANS on DATESITE', 
             'meets RELIGION HUMANS on DATESITE', 
             'meets NATIONALITY HUMANS on DATESITE', 
+            'likes to ACTIVITY', 
+            'likes to ACTIVITY with PEOPLE', 
+            'loves to ACTIVITY', 
+            'doesn't like to ACTIVITY', 
             '"the ' + nationality + ' BEAST"'
           ];
 
@@ -277,6 +282,7 @@
             form = form.replace('MILLNESS', pickRandom(MILLNESS));
             form = form.replace('HUMANS', pickRandom(HUMANS));
             form = form.replace('DATESITE', pickRandom(DATESITE));
+            form = form.replace('ACTIVITY', pickRandom(ACTIVITY));
             form = form.replace('liberal liberal', 'liberal');
             form = form.replace('conservative conservative', 'conservative');
             form = form.replace(/ a (?=[aeiou])/,' an ');
