@@ -534,7 +534,9 @@
             if ((key == 'beard' || key == 'stache') && gender == 'female')
               return 0;
 
-            if ((key == 'hair') || (key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
+            if ((nationality === 'saudi' || nationality === 'palestinian' || nationality === 'arab') && (key === 'hair'))
+              draw(value[25]);
+            else if ((key == 'hair') || (key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
               draw(pickRandom(value), hairShift);
             else if (black && (key === 'base'))
               draw(value[6]);
@@ -544,8 +546,6 @@
               draw(value[3]);
             else if ((nationality === 'indonesian') && (key === 'base'))
               draw(value[5]);
-            else if ((nationality === 'saudi' || nationality === 'palestinian' || nationality === 'arab') && (key === 'hair'))
-              draw(value[25]);
             else if (poc && (key === 'base'))
               draw(pickRandom(value));
             else if ((nationality === 'korean' || nationality === 'mongol') && (key === 'base'))
