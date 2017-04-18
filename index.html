@@ -542,7 +542,7 @@
               draw(value[26], hairShift);
             else if (nationality === 'saudi' && key === 'hair')
               draw(value[26]);
-            else if ((key == 'hair') || (key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
+            else if ((key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
               draw(pickRandom(value), hairShift);
             else if (key == 'hair')
               draw(pickRandomBetween(value, 0, 25), hairShift);
