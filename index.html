@@ -356,13 +356,13 @@
           return ar[Math.floor(Math.random() * ar.length)];
         }
 
-        function pickRandomBetween(ar, min, max) {
-          return ar[randomBetween(min,max)];
-        }
-
         function randomBetween (min, max) {
           return (Math.random() * (max - min)) + min;
         } 
+
+        function pickRandomBetween(ar, min, max) {
+          return ar[randomBetween(min,max)];
+        }
 
         function randomName (nationality, gender) {
           var vowels = "aaaaaeeeeeeiiiooouuu";
