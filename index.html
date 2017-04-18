@@ -361,7 +361,7 @@
         } 
 
         function pickRandomBetween(ar, min, max) {
-          return ar[randomBetween(min,max)];
+          return ar[Math.round(randomBetween(min,max))];
         }
 
         function randomName (nationality, gender) {
