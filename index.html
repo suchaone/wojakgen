@@ -459,7 +459,7 @@
         images.set('shirt',  new Array(8));
         images.set('beard',  new Array(9));
         images.set('stache', new Array(6));
-        images.set('hair',   new Array(25));
+        images.set('hair',   new Array(27));
 
         var imagesToLoad = 0;
         
@@ -544,6 +544,8 @@
               draw(value[3]);
             else if ((nationality === 'indonesian') && (key === 'base'))
               draw(value[5]);
+            else if ((nationality === 'saudi') && (key === 'hair'))
+              draw(value[25]);
             else if (poc && (key === 'base'))
               draw(pickRandom(value));
             else if ((nationality === 'korean' || nationality === 'mongol') && (key === 'base'))
