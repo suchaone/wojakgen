@@ -477,10 +477,10 @@
             nationality = 'american';
 
           // this results in too many pocs; will adjust later
-          poc = (nationality === 'african american' || nationality === 'black' || nationality === 'uzbek' || nationality === 'algerian' || nationality === 'armenian' || nationality === 'filipino' || nationality === 'greek' || nationality === 'mongol' || nationality === 'spaniard' || nationality === 'turk' || nationality === 'arab' || nationality === 'palestinian' || nationality === 'armenian' || nationality === 'aramean' || nationality === 'gypsy' || nationality === 'cuban' || nationality === 'mexican' || nationality === 'colombian');
-          black = (nationality === 'african american' || nationality === 'black');
+          poc     = (nationality === 'african american' || nationality === 'black' || nationality === 'uzbek' || nationality === 'algerian' || nationality === 'armenian' || nationality === 'filipino' || nationality === 'greek' || nationality === 'mongol' || nationality === 'spaniard' || nationality === 'turk' || nationality === 'arab' || nationality === 'palestinian' || nationality === 'armenian' || nationality === 'aramean' || nationality === 'gypsy' || nationality === 'cuban' || nationality === 'mexican' || nationality === 'colombian' || nationality === 'indonesian' || nationality === 'gypsy');
+          black   = (nationality === 'african american' || nationality === 'black' || nationality === 'ethiopian' || nationality === 'nigerian' || nationality === 'somalian');
           blondie = (nationality === 'finn' || nationality === 'swede' || nationality === 'german' || nationality === 'ukrainian' || nationality === 'russian');
-          asian = (nationality === 'mongol' || nationality === 'korean');
+          asian   = (nationality === 'mongol' || nationality === 'korean');
           
           document.getElementById("char-attribute").innerHTML = randomAttribute();
           document.getElementById("char-name").innerHTML = randomName(nationality, gender);
@@ -525,8 +525,12 @@
               draw(pickRandom(value), hairShift);
             else if (black && (key === 'base'))
               draw(value[6]);
+            else if ((nationality === 'ethiopian') && (key === 'nose'))
+              draw(value[2]);
             else if (black && (key === 'nose'))
               draw(value[3]);
+            else if ((nationality === 'indonesian') && (key === 'base'))
+              draw(value[5]);
             else if (poc && (key === 'base'))
               draw(pickRandom(value));
             else if ((nationality === 'korean' || nationality === 'mongol') && (key === 'base'))
