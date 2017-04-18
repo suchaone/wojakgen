@@ -146,6 +146,7 @@
           var DRINK = [ 'coffee', 'tea', 'black tea', 'oolong tea', 'green tea', 'jasmine tea', 'pu erh tea', 'hibiscus tea', 'chamomile tea', 'pepsi', 'sprite', 'root beer', 'soda', 'club soda', 'FRUIT juice', 'BOOZE', 'matcha', 'yerba mate', 'hot chocolate', 'red bull', 'milk', 'soy milk', 'almond milk', 'rice milk', 'yak milk', 'goat milk' ];
           var VESSEL = [ 'teapot', 'mug', 'cup', 'pitcher', 'jug', 'gaiwan', 'bowl', 'beaker', 'pot', 'bottle', 'flask', 'goblet', 'tankard' ];
           var MATERIAL = [ 'wooden', 'golden', 'ebony', 'silver', 'brass', 'clay', 'pewter', 'tin', 'copper', 'ivory', 'aluminum', 'glass', 'crystal', 'platinum' ];
+          var INSTRUMENT = [ 'guitar', 'balalaika', 'violin', 'viola', 'cello', 'ocarina', 'trumpet', 'saxophone', 'lute', 'kazoo', 'harmonica', 'penny whistle', 'tin whistle', 'harp', 'piano', 'keyboard', 'accordion', 'bagpipes', 'clarinet', 'flute', 'recorder', 'xylophone', 'trombone', 'synth', 'cajon', 'mandolin', 'bassoon', 'tuba', 'theremin', 'didgeridoo', 'banjo', 'tambourine', 'bongos', 'harpsichord', 'sitar', 'lyre', 'melodica', 'oud', 'maracas' ];
           
           var forms = [
             'OPINION PLURAL',
@@ -256,6 +257,13 @@
             'bought a ITEM', 
             'desires a ITEM', 
             'stole a ITEM', 
+            'plays the INSTRUMENT', 
+            'serenades HUMANS with the INSTRUMENT', 
+            'serenades his DATESITE dates with the INSTRUMENT', 
+            'plays the INSTRUMENT for his DATESITE dates', 
+            'plays the INSTRUMENT to PEOPLE', 
+            'plays the INSTRUMENT to his pet BEAST', 
+            'XLY plays the INSTRUMENT', 
             'survived a BEAST attack', 
             'a BEAST in a past life', 
             'a RELIGION ROYALTY in a past life', 
@@ -320,15 +328,12 @@
             form = form.replace('DATESITE', pickRandom(DATESITE));
             form = form.replace('ACTIVITY', pickRandom(ACTIVITY));
             form = form.replace('BOSS', pickRandom(BOSS));
-
-
             form = form.replace('FRUIT', pickRandom(FRUIT));
             form = form.replace('BOOZE', pickRandom(BOOZE));
             form = form.replace('DRINK', pickRandom(DRINK));
             form = form.replace('VESSEL', pickRandom(VESSEL));
             form = form.replace('MATERIAL', pickRandom(MATERIAL));
-
-
+            form = form.replace('INSTRUMENT', pickRandom(INSTRUMENT));
             form = form.replace('ROYALTY', pickRandom(ROYALTY));
             form = form.replace('liberal liberal', 'liberal');
             form = form.replace('conservative conservative', 'conservative');
