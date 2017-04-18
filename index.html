@@ -356,6 +356,10 @@
           return ar[Math.floor(Math.random() * ar.length)];
         }
 
+        function pickRandomBetween(ar, min, max) {
+          return ar[randomBetween(min,max)];
+        }
+
         function randomBetween (min, max) {
           return (Math.random() * (max - min)) + min;
         } 
@@ -534,8 +538,10 @@
             if ((key == 'beard' || key == 'stache') && gender == 'female')
               return 0;
 
-            if ((nationality === 'saudi' || nationality === 'palestinian' || nationality === 'arab') && (key === 'hair'))
-              draw(value[25]);
+            if ((nationality === 'palestinian' || nationality === 'arab') && (key === 'hair'))
+              draw(value[26], hairShift);
+            else if (nationality === 'saudi' && key === 'hair')
+              draw(value[26]);
             else if ((key == 'hair') || (key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
               draw(pickRandom(value), hairShift);
             else if (black && (key === 'base'))
@@ -552,6 +558,8 @@
               draw(value[1]);
             else if (key === 'base')
               draw(value[0]);
+            else if (key === 'hair')
+              draw(pickRandomBetween(value, 0, 25));
             else
               draw(pickRandom(value));
           });
