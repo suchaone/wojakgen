@@ -153,17 +153,14 @@
           var FORM4 = [ 'XLY eats FOOD', 'loves FOOD and DRINK', 'XLY guzzles FOOD', 'drinks DRINK', 'sips DRINK', 'drinks nothing but DRINK', 'XLY drinks DRINK', 'XLY sips DRINK', 'drinks DRINK from a MATERIAL VESSEL', 'sips DRINK from a MATERIAL VESSEL', 'eats FOOD with PEOPLE', 'feeds FOOD to PEOPLE', 'feeds FOOD to BEASTs', 'feeds FOOD to his pet BEAST', 'cooks FOOD for PEOPLE' ];
           var FORM5 = [ 'reads NATIONALITY lit', 'XLY reads NATIONALITY lit', 'watches NATIONALITY films', 'listens to NATIONALITY MUSIC', 'recites NATIONALITY poetry to PEOPLE' ];
           var FORM6 = [ 'meets HUMANS on DATESITE', 'treats DATESITE dates to FOOD', 'meets RELIGION HUMANS on DATESITE', 'meets NATIONALITY HUMANS on DATESITE' ];
+          var FORM7 = [ 'STORY CLONE CELEBRITY', 'STORY a ADJECTIVE PERSON', 'STORY a ADJECTIVE IDEOLOGY', 'STORY a ADJECTIVE NATIONALITY', 'STORY a ADJECTIVE NATIONALITY BOSS' ];
+          var FORM8 = [ 'a RELIGION ROYALTY in a past life', 'descended from a RELIGION ROYALTY', 'was a ADJECTIVE ROYALTY in a past life', 'walks like a BOSS', 'walks like a ROYALTY' ];
+          var FORM9 = [ 'OPINION PEOPLE', 'OPINION the PEOPLE', 'OPINION NATIONALITY PEOPLE', 'OPINION ADJECTIVE PEOPLE', 'OPINION the NATIONALITY PEOPLE', 'plays VIDYA with PEOPLE', 'studies the effects of DRUG on PEOPLE', 'studies the effects of PLURAL on PEOPLE', 'prefers the company of PEOPLE', 'uneasy around PEOPLE', 'beats up PEOPLE', 'undresses PEOPLE with his eyes', 'leers at PEOPLE', 'sells DRUG to PEOPLE' ];
 
           var forms = [
             'OPINION PLURAL',
             'OPINION certain PLURAL',
             'OPINION his PLURAL',
-            'OPINION ADJECTIVE PEOPLE',
-            'OPINION ADJECTIVE PEOPLE',
-            'OPINION PEOPLE',
-            'OPINION the PEOPLE',
-            'OPINION NATIONALITY PEOPLE',
-            'OPINION the NATIONALITY PEOPLE',
             'OPINION VIDYA',
             'professional OCCUPATION',
             'amateur OCCUPATION',
@@ -172,7 +169,6 @@
             'tenured OCCUPATION',
             'unionized OCCUPATION',
             'XLY plays VIDYA',
-            'plays VIDYA with PEOPLE',
             'ADJECTIVE VIDYA player',
             'OPINION PREFIXIDEOLOGYs',
             'OPINION IDEOLOGYs',
@@ -193,18 +189,10 @@
             'COMMON ' + nationality + ' IDEOLOGY',
             'ADJECTIVE CELEBRITY FAN',
             'IDEOLOGY CELEBRITY FAN',
-            'STORY CLONE CELEBRITY',
-            'STORY a ADJECTIVE PERSON',
-            'STORY a ADJECTIVE IDEOLOGY',
-            'STORY a ADJECTIVE NATIONALITY',
-            'STORY a ADJECTIVE NATIONALITY BOSS',
             'TRAITLY TRAITADJ PERSON',
             'TRAITLY TRAITADJ ' + nationality,
             'TRAITLY TRAITADJ IDEOLOGY',
             'TRAITLY TRAITADJ CELEBRITY FAN',
-            'studies the effects of DRUG on PEOPLE',
-            'studies the effects of PLURAL on PEOPLE',
-            'sells DRUG to PEOPLE',
             'WORK PLACE',
             'XLY wears FABRIC',
             'XLY wears FABRIC SHIRTs',
@@ -213,11 +201,6 @@
             'studies DEGREE',
             'did a ted-x talk on DEGREE',
             'OPINION DEGREE',
-            'prefers the company of PEOPLE',
-            'uneasy around PEOPLE',
-            'beats up PEOPLE', 
-            'undresses PEOPLE with his eyes', 
-            'leers at PEOPLE', 
             'self-diagnosed MILLNESS', 
             'diagnosed MILLNESS', 
             'undiagnosed MILLNESS', 
@@ -225,16 +208,15 @@
             'loves to ACTIVITY', 
             'no longer likes to ACTIVITY', 
             'doesn\'t like to ACTIVITY', 
-            'a RELIGION ROYALTY in a past life', 
-            'descended from a RELIGION ROYALTY', 
-            'was a ADJECTIVE ROYALTY in a past life', 
-            'walks like a BOSS', 
             'FORM1',
             'FORM2',
             'FORM3',
             'FORM4',
             'FORM5',
-            'FORM6'
+            'FORM6',
+            'FORM7',
+            'FORM8',
+            'FORM9'
           ];
 
           //'FRAME STORY that ADJECTIVE PERSON',
@@ -302,6 +284,9 @@
             form = form.replace('FORM4', pickRandom(FORM4));
             form = form.replace('FORM5', pickRandom(FORM5));
             form = form.replace('FORM6', pickRandom(FORM6));
+            form = form.replace('FORM7', pickRandom(FORM7));
+            form = form.replace('FORM8', pickRandom(FORM8));
+            form = form.replace('FORM9', pickRandom(FORM9));
             form = form.replace('liberal liberal', 'liberal');
             form = form.replace('conservative conservative', 'conservative');
             form = form.replace(/ a (?=[aeiou])/,' an ');
