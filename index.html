@@ -332,12 +332,14 @@
             else
               name = pickRandom(['ashley', 'emma', 'emily', 'emma', 'madison', 'olivia', 'isabella', 'samantha', 'hannah', 'liz', 'alexis', 'sarah', 'lily', 'jen', 'kaylee', 'alison', 'zoe', 'paige', 'andrea', 'leah', 'claire', 'molly', 'amy', 'natalie', 'elise', 'lindsay', 'monica']);
             
-            surname = pickRandom(['smith', 'johnson', 'william', 'jone', 'brown', 'miller', 'wilson', 'moore', 'tayor', 'anderson', 'thomas', 'jackson', 'white', 'harris', 'martin', 'thompson', 'robinson', 'clark', 'lewis', 'lee', 'walker', 'hall', 'allen', 'young', 'king', 'wright', 'hill', 'scott', 'green', 'edward', 'turner', 'parker', 'stewart', 'roger', 'perez', 'carter', 'baker', 'adam', 'morris', 'roger', 'gray', 'jenkin', 'cole', 'aker', 'albert', 'appleton', 'arrington', 'arthur', 'atkinson', 'atwood', 'bank', 'barker', 'barton', 'bate', 'beck', 'becket', 'bell', 'bennet', 'beverly', 'blake', 'blackwood', 'bonner', 'booth', 'bourne', 'bran', 'brant', 'bryant', 'brown' ]);
+            surname = pickRandom(['smith', 'john', 'william', 'jone', 'brown', 'miller', 'will', 'moore', 'tayor', 'ander', 'jack', 'white', 'harris', 'martin', 'thomp', 'robin', 'clark', 'lewis', 'lee', 'walker', 'hall', 'allen', 'young', 'king', 'wright', 'hill', 'scott', 'green', 'edward', 'turner', 'parker', 'stewart', 'roger', 'perez', 'carter', 'baker', 'adam', 'morris', 'roger', 'gray', 'jenkin', 'cole', 'aker', 'albert', 'apple', 'arrington', 'arthur', 'atkin', 'atwood', 'bank', 'barker', 'barton', 'bate', 'beck', 'becket', 'bell', 'bennet', 'blake', 'bonner', 'booth', 'bourne', 'bran', 'brant', 'bryant', 'brown' ]);
 
             if (Math.random() > .3)
               surname += 'son';
             else if (Math.random() > .3)
               surname += 's';
+            else if (Math.random() > .3)
+              surname += 'ton';
             else if (Math.random() > .3)
               surname = 'O\'' + capitalize(surname);
               
