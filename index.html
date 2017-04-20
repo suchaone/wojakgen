@@ -168,7 +168,7 @@
             [ 'HUMOP PREFIXIDEOLOGYs', 'HUMOP IDEOLOGYs', 'HUMOP ADJECTIVE IDEOLOGYs', 'HUMOP CELEBRITY FANs', 'HUMOP ADJECTIVE CELEBRITY FANs' ],
             [ 'OBJOP PLURAL', 'OBJOP certain PLURAL', 'OBJOP his PLURAL', 'OBJOP VIDYA' ],
             [ 'XLY plays VIDYA', 'likes to ACTIVITY', 'loves to ACTIVITY', 'no longer likes to ACTIVITY', 'doesn\'t like to ACTIVITY' ],
-            [ 'self-diagnosed MILLNESS', 'diagnosed MILLNESS', 'undiagnosed MILLNESS' ],
+            [ 'self-diagnosed MILLNESS', 'diagnosed MILLNESS', 'undiagnosed MILLNESS', 'medicated MILLNESS', 'unmedicated MILLNESS' ],
             [ 'XLY wears FABRIC', 'XLY wears FABRIC SHIRTs', 'HUMOP HUMANS in FABRIC', 'HUMOP HUMANS in FABRIC SHIRTs' ],
             [ 'PROF OCCUPATION' ],
             [ 'WORK PLACE' ]
@@ -176,6 +176,9 @@
 
           // pick a random form, and a random item within it
           var form = pickRandom(pickRandom(forms));
+
+          console.log("");
+          console.log("spawning the " + nationality);
           console.log(form);
 
           // why do you do this bad thing?
@@ -297,30 +300,33 @@
             return name + pickRandom(["nov", "novsky", "novich"]);
           }
 
-          if (typeof nationality !== 'undefined' && (nationality === 'russian' || nationality === 'ukrainian')) {
+          if (nationality === 'russian' || nationality === 'ukrainian') {
             name = russifyName(name);
             surname = russifySurname(surname);
-          } else if (typeof nationality !== 'undefined' && (nationality === 'jew' || nationality === 'israeli')) {
+          else if (nationality === 'black' || nationality === 'african american') {
+            name = pickRandom(['DeShawn', 'DeAndre', 'marquis', 'darnell', 'terrell', 'malik', 'trevon', 'tyrone', 'willie', 'dominique', 'demetrius', 'reginald', 'jamal', 'maurice', 'jalen', 'darius', 'xavier', 'terrance', 'andre', 'darryl', 'curtis', 'zeke', 'zack']);
+            surname = pickRandom(['williams', 'johnson', 'smith', 'jones', 'brown', 'jackson', 'davis', 'thomas', 'harris', 'robinson', 'taylor', 'wilson', 'moore', 'white', 'lewis', 'walker', 'green', 'washington', 'thompson', 'anderson', 'scott', 'carter', 'miller', 'king', 'coleman', 'james', 'franklin', 'tucker', 'berry', 'little']);
+          } else if (nationality === 'jew' || nationality === 'israeli') {
             if (gender === 'male')
               name = pickRandom(['amos', 'ariel', 'ari', 'avigdor', 'benyamin', 'boaz', 'chaim', 'david', 'eli', 'moshe']);
             else
               name = pickRandom(['avital', 'carmel', 'deborah', 'efrat', 'ilana', 'maya', 'naama', 'rache', 'sarah', 'tal']);
             surname = russifySurname(surname);
-          } else if (typeof nationality !== 'undefined' && (nationality === 'german' || nationality === 'bavarian')) {
+          } else if (nationality === 'german' || nationality === 'bavarian') {
             name = pickRandom(['jan', 'jannik', 'stefan', 'jorg', 'klaus', 'peter', 'gunter', 'hans', 'wolfgang', 'heinz', 'herbert', 'karl', 'ernst', 'friedrich', 'wilhelm', 'otto']);
             surname = pickRandom(['muller', 'schmidt', 'schneider', 'fischer', 'weber', 'meyer', 'wagner', 'becker', 'schulz', 'hoffman', 'schafer', 'koch', 'bauer', 'richter', 'klein', 'wolf', 'schoder', 'neumann', 'schwartz', 'zimmerman', 'braun', 'kruger', 'lange', 'schmitt', 'krause', 'lehmann', 'stirner']);
-          } else if (typeof nationality !== 'undefined' && (nationality === 'algerian' || nationality === 'arab' || nationality === 'palestian' || nationality === 'saudi' || nationality === 'egyptian')) {
+          } else if (nationality === 'algerian' || nationality === 'arab' || nationality === 'palestian' || nationality === 'saudi' || nationality === 'egyptian') {
             name = pickRandom(['abbas', 'abdul', 'abid', 'amir', 'arif', 'aziz', 'bakr', 'bashir', 'falah', 'faisal', 'habib', 'ibrahim', 'ismail', 'ilias', 'kazim', 'muhammad', 'mustafa', 'nadir', 'nasir', 'sahir', 'talib', 'nasim', 'yasir']);
             surname = pickRandom(['abbas', 'abdul', 'ahmad', 'Al-Mubarak', 'Al-Bariqi', 'alavi', 'ali', 'amri', 'Al-Asiri', 'ata', 'awad', 'ayad', 'badawi', 'ghali', 'gaddafi', 'Al Hamdan', 'hamid', 'hussein']);
-          } else if (typeof nationality !== 'undefined' && (nationality === 'korean' )) {
+          } else if (nationality === 'korean' ) {
             name = pickRandom(['jun', 'jung-hoon', 'sung-ho', 'joon-ho', 'sang-hoon' ]);
             surname = pickRandom(['kim', 'pak', 'yi', 'ri', 'chong', 'cho', 'kang', 'chang', 'yung', 'han', 'so', 'song', 'chu', 'kwak', 'ki']);
-          } else if (typeof nationality !== 'undefined' && (nationality === 'mexican' || nationality === 'spaniard')) {
+          } else if (nationality === 'mexican' || nationality === 'spaniard') {
             name = pickRandom(['jose', 'juan', 'francisco', 'jesus', 'antonio', 'alejandro', 'miguel', 'pedro', 'manuel', 'ricardo', 'fernando', 'carlos', 'rafael', 'elias', 'raul', 'diego' ]);
             surname = pickRandom(['garcia', 'lopez', 'rodriguez', 'hernandez', 'martinez', 'gonzalez', 'perez', 'sanchez', 'ramirez', 'flores', 'torres', 'rivera', 'diaz', 'cruz', 'alvarez', 'castillo', 'romero', 'vega' ]);
             if (Math.random() > 0.5)
               surname = surname + '-' + capitalize(pickRandom(['garcia', 'lopez', 'rodriguez', 'hernandez', 'martinez', 'gonzalez', 'perez', 'sanchez', 'ramirez', 'flores', 'torres', 'rivera', 'diaz', 'cruz', 'alvarez', 'castillo', 'romero', 'vega' ]));
-          } else if (typeof nationality !== 'undefined' && (nationality === 'american' || nationality === 'brit' || nationality === 'canadian' || nationality === 'australian')) {
+          } else if (nationality === 'american' || nationality === 'brit' || nationality === 'canadian' || nationality === 'australian') {
             if (gender === 'male')
               name = pickRandom(['james', 'john', 'robert', 'michael', 'david', 'richard', 'daniel', 'paul', 'mark', 'donald', 'george', 'steve', 'jecff', 'larry', 'josh', 'dennis', 'carl', 'harold', 'doug', 'joe', 'justin', 'harry', 'bruce', 'aaron', 'jesse', 'craig', 'leonard', 'stanley', 'nate', 'alex', 'leo', 'tim', 'zack', 'brad', 'neil', 'jim', 'bob', 'bobby', 'xander', 'ethan', 'adam', 'baxter', 'caleb', 'matt', 'robert', 'robin', 'gabriel', 'gabe', 'ray', 'raymond', 'phil', 'toby', 'bart', 'arlo', 'abel', 'ace', 'adir', 'aidan', 'aiden', 'al', 'alvin', 'andre', 'ansel', 'anthony', 'tony', 'antoine', 'aric', 'arnie', 'arnold', 'arthur', 'austin', 'barney', 'barry', 'benjamin', 'ben', 'brandon', 'brent', 'chad', 'bryan', 'buster', 'calvin', 'casey', 'cecil', 'cedric', 'chase', 'chandler', 'charlie', 'chip', 'chris', 'christopher', 'claude', 'cletus', 'cliff', 'cody', 'cyril', 'cyrus', 'damion', 'dan', 'darcy', 'darian', 'darren', 'daryl', 'dean', 'shawn', 'dominic', 'douggie', 'drew', 'dudley', 'dustin', 'ed', 'dylan', 'elliot', 'zeke' ]);
             else
