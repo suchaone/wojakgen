@@ -55,7 +55,7 @@
 
         var NOUN = [ 'cat', 'dog', 'sheep', 'man', 'woman', 'ball', 'tree', 'lake', 'stick', 'rock', 'river', 'hat', 'shoe', 'staff', 'cloak', 'coin' ];
         var ADJECTIVE = [ 'deranged', 'deluded', 'uncanny', 'wayward', 'fiery', 'big', 'tiny', 'violent', 'lying', 'omnipresent', 'omniscient', 'fearful', 'brave', 'friendly', 'playful' ];
-        var NATIONALITY = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'saudi', 'algerian', 'egyptian', 'ethiopian', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black' ];
+        var NATIONALITY = [ 'immigrant', 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'saudi', 'algerian', 'egyptian', 'ethiopian', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black' ];
 
         function makeTulpa (x, y) {
           var tulpa = {};
@@ -332,13 +332,14 @@
             else
               name = pickRandom(['ashley', 'emma', 'emily', 'emma', 'madison', 'olivia', 'isabella', 'samantha', 'hannah', 'liz', 'alexis', 'sarah', 'lily', 'jen', 'kaylee', 'alison', 'zoe', 'paige', 'andrea', 'leah', 'claire', 'molly', 'amy', 'natalie', 'elise', 'lindsay', 'monica']);
             
+            surname = pickRandom(['smith', 'johnson', 'william', 'jone', 'brown', 'miller', 'wilson', 'moore', 'tayor', 'anderson', 'thomas', 'jackson', 'white', 'harris', 'martin', 'thompson', 'robinson', 'clark', 'lewis', 'lee', 'walker', 'hall', 'allen', 'young', 'king', 'wright', 'hill', 'scott', 'green', 'edward', 'turner', 'parker', 'stewart', 'roger', 'perez', 'carter', 'baker', 'adam', 'morris', 'roger', 'gray', 'jenkin', 'cole', 'aker', 'albert', 'appleton', 'arrington', 'arthur', 'atkinson', 'atwood', 'bank', 'barker', 'barton', 'bate', 'beck', 'becket', 'bell', 'bennet', 'beverly', 'blake', 'blackwood', 'bonner', 'booth', 'bourne', 'bran', 'brant', 'bryant', 'brown' ]);
+
             if (Math.random() > .3)
-              surname = pickRandom(['smith', 'johnson', 'williams', 'jones', 'brown', 'miller', 'wilson', 'moore', 'tayor', 'anderson', 'thomas', 'jackson', 'white', 'harris', 'martin', 'thompson', 'garcia', 'martinez', 'robinson', 'clark', 'lewis', 'lee', 'walker', 'hall', 'allen', 'young', 'king', 'wright', 'lopez', 'hill', 'scott', 'green', 'edwards', 'turner', 'parker', 'stewart', 'roger', 'perez', 'carter', 'baker', 'adams', 'morris', 'rogers', 'gray', 'jenkins', 'coleman', 'addison', 'akers', 'albertson', 'appleton', 'arrington', 'arthur', 'atkinson', 'atwood', 'banks', 'barker', 'barton', 'bates', 'beck', 'becket', 'bell', 'bennet', 'beverly', 'blake', 'blackwood', 'bonner', 'booth', 'bourne', 'branson', 'brant', 'bryant', 'brown' ]);
-            else if (Math.random() > .5)
               surname += 'son';
-            else {
+            else if (Math.random() > .3)
+              surname += 's';
+            else if (Math.random() > .3)
               surname = 'O\'' + capitalize(surname);
-            }
               
           }
 
