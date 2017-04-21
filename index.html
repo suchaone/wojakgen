@@ -148,6 +148,7 @@
           var DRINK = [ 'coffee', 'tea', 'black tea', 'oolong tea', 'green tea', 'bubble tea', 'jasmine tea', 'pu erh tea', 'hibiscus tea', 'chamomile tea', 'pepsi', 'sprite', 'root beer', 'soda', 'club soda', 'FRUIT juice', 'BOOZE', 'matcha', 'yerba mate', 'hot chocolate', 'red bull', 'milk', 'soy milk', 'almond milk', 'rice milk', 'yak milk', 'goat milk', 'red wine', 'white wine', 'rice wine', 'jim beam', 'moonshine', 'jagermeister', 'goldschlager', 'beer', 'heineken', 'bud light', 'guinness', 'ale', 'ginger ale' ];
           var VESSEL = [ 'teapot', 'mug', 'cup', 'pitcher', 'jug', 'gaiwan', 'bowl', 'beaker', 'pot', 'bottle', 'flask', 'goblet', 'tankard' ];
           var MATERIAL = [ 'wooden', 'golden', 'ebony', 'silver', 'brass', 'clay', 'pewter', 'tin', 'copper', 'ivory', 'aluminum', 'glass', 'crystal', 'platinum' ];
+          var TEMPERATURE = [ 'cold', 'hot', 'warm', 'lukewarm', 'iced', 'chilled', 'piping hot', 'room temperature', 'tepid' ];
           var INSTRUMENT = [ 'guitar', 'balalaika', 'violin', 'viola', 'cello', 'ocarina', 'trumpet', 'saxophone', 'lute', 'kazoo', 'harmonica', 'penny whistle', 'tin whistle', 'harp', 'piano', 'keyboard', 'accordion', 'bagpipes', 'clarinet', 'flute', 'recorder', 'xylophone', 'trombone', 'synth', 'cajon', 'mandolin', 'bassoon', 'tuba', 'theremin', 'didgeridoo', 'banjo', 'tambourine', 'bongos', 'harpsichord', 'sitar', 'lyre', 'melodica', 'oud', 'maracas' ];
           var PROF = [ 'professional', 'amateur', 'full-time', 'part-time', 'tenured', 'unionized' ];
 
@@ -155,7 +156,7 @@
             [ 'plays the INSTRUMENT', 'serenades HUMANS with the INSTRUMENT', 'serenades his DATESITE dates with the INSTRUMENT', 'plays the INSTRUMENT for his DATESITE dates', 'plays the INSTRUMENT for PEOPLE', 'plays the INSTRUMENT for his pet BEAST', 'XLY plays the INSTRUMENT' ],
             [ 'owns a ITEM', 'has a ITEM', 'bought a ITEM', 'desires a ITEM', 'stole a ITEM', 'stole a ITEM from a NATIONALITY', 'stole a ITEM from a NATIONALITY BOSS', 'stole a ITEM from a BOSS','stole a ITEM from a ADJECTIVE BOSS', 'bought a ITEM from a NATIONALITY'],
             [ 'cooks BEASTs for PEOPLE', 'has a BEAST fursona', 'experiments on BEASTs', 'administers DRUG to BEASTs', 'his ADJECTIVE pet BEAST is his only friend', 'more BEAST than man', 'looks like a BEAST', 'a BEAST in bed', 'a BEAST in the sack', 'walks like a BEAST', '"the ' + nationality + ' BEAST"', 'survived a BEAST attack', 'a BEAST in a past life' ],
-            [ 'XLY eats FOOD', 'loves FOOD and DRINK', 'XLY guzzles FOOD', 'drinks DRINK', 'sips DRINK', 'drinks nothing but DRINK', 'XLY drinks DRINK', 'XLY sips DRINK', 'drinks DRINK from a MATERIAL VESSEL', 'sips DRINK from a MATERIAL VESSEL', 'eats FOOD with PEOPLE', 'feeds FOOD to PEOPLE', 'feeds FOOD to BEASTs', 'feeds FOOD to his pet BEAST', 'cooks FOOD for PEOPLE' ],
+            [ 'XLY eats FOOD', 'loves FOOD and DRINK', 'XLY guzzles FOOD', 'drinks DRINK', 'sips DRINK', 'drinks nothing but DRINK', 'drinks nothing but TEMPERATURE DRINK', 'XLY drinks DRINK', 'XLY sips DRINK', 'drinks DRINK from a MATERIAL VESSEL', 'sips DRINK from a MATERIAL VESSEL', 'eats FOOD with PEOPLE', 'feeds FOOD to PEOPLE', 'feeds FOOD to BEASTs', 'feeds FOOD to his pet BEAST', 'cooks FOOD for PEOPLE' ],
             [ 'reads NATIONALITY lit', 'XLY reads NATIONALITY lit', 'watches NATIONALITY films', 'listens to NATIONALITY MUSIC', 'recites NATIONALITY poetry to PEOPLE' ],
             [ 'meets HUMANS on DATESITE', 'treats DATESITE dates to FOOD', 'meets RELIGION HUMANS on DATESITE', 'meets NATIONALITY HUMANS on DATESITE' ],
             [ 'STORY CLONE CELEBRITY', 'STORY a ADJECTIVE PERSON', 'STORY a ADJECTIVE IDEOLOGY', 'STORY a ADJECTIVE NATIONALITY', 'STORY a ADJECTIVE NATIONALITY BOSS' ],
@@ -207,6 +208,7 @@
             form = form.replace('TRAITLY', pickRandom(TRAITLY));
             form = form.replace('TRAITADJ', pickRandom(TRAITADJ));
             form = form.replace('VIDYA', pickRandom(VIDYA));
+            form = form.replace('TEMPERATURE', pickRandom(TEMPERATURE));
             form = form.replace('XLY', pickRandom(XLY));
             form = form.replace('RELIGION', pickRandom(RELIGION));
             form = form.replace('FABRIC', pickRandom(FABRIC));
