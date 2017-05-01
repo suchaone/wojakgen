@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       #char {
         text-align: center;
@@ -14,6 +15,16 @@
       #char-attribute {
         font-style: italic;
         margin-bottom: 10px;
+      }
+
+      #accepted {
+        margin-top: 30px;
+      }
+
+      #accepted canvas {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
       }
       button {
         color: white;
@@ -60,25 +71,32 @@
     <script>
       window.onload = function() {
 
-        var NOUN = [ 'cat', 'dog', 'sheep', 'man', 'woman', 'ball', 'tree', 'lake', 'stick', 'rock', 'river', 'hat', 'shoe', 'staff', 'cloak', 'coin' ];
-        var ADJECTIVE = [ 'deranged', 'deluded', 'uncanny', 'wayward', 'fiery', 'big', 'tiny', 'violent', 'lying', 'omnipresent', 'omniscient', 'fearful', 'brave', 'friendly', 'playful' ];
-        var NATIONALITY = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'saudi', 'algerian', 'egyptian', 'ethiopian', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black' ];
-        var GREEKNAMES = [ "Acamas", "Alekos", "Alexander", "Alexis", "Alexius", "Anastasius", "Andreas", "Angelos ", "Apostolos ", "Ari ", "Aristophanes ", "Athan", "Athanasios ", "Athanasius ", "Charis ", "Christodoulos", "Christos ", "Chrysanthos", "Costas", "Cyriacus ", "Damaskinos", "Damian ", "Demetre", "Demetrius", "Dimitris", "Dysmas ", "Eleutherios", "Elias", "Emmanouil", "Eustathius", "Evangelos", "Saint George", "Georgios", "Giorgos", "Gregory ", "Homer ", "Ioannis", "Isidore", "Jason ", "John ", "Joseph", "Kokos", "Konstantinos", "Lambros", "Lefter", "Leonidas ", "Loukas", "Lycurgus", "Manolis", "Marcos ", "Mario ", "Marios", "Matthaios", "Miltiades ", "Mitsos", "Nestor ", "Nicephorus", "Nicetas", "Nicholas", "Nikolaos", "Nikos", "Orestes ", "Panagiotis", "Pantelis", "Paraskevas ", "Paris ", "Pavlos", "Perikles ", "Peter ", "Phaedon ", "Plutarch ", "Polychronis", "Pygmalion ", "Sakis", "Sotirios", "Sotiris", "Spiridon", "Spiro ", "Spyridon", "Stathis", "Stavros", "Stelios", "Tassos", "Thanasis", "Thanos ", "Themistocles ", "Theodore ", "Theofanis", "Theophilus", "Therapont", "Timothy ", "Ulysses ", "Vassilios", "Yannis", "Zenobios", "Zoilos" ];
+        var NOUN          = [ 'cat', 'dog', 'sheep', 'man', 'woman', 'ball', 'tree', 'lake', 'stick', 'rock', 'river', 'hat', 'shoe', 'staff', 'cloak', 'coin' ];
+        var ADJECTIVE     = [ 'deranged', 'deluded', 'uncanny', 'wayward', 'fiery', 'big', 'tiny', 'violent', 'lying', 'omnipresent', 'omniscient', 'fearful', 'brave', 'friendly', 'playful' ];
+        var NATIONALITY   = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'saudi', 'algerian', 'egyptian', 'ethiopian', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black' ];
+        var GREEKNAMES    = [ "Acamas", "Alekos", "Alexander", "Alexis", "Alexius", "Anastasius", "Andreas", "Angelos ", "Apostolos ", "Ari ", "Aristophanes ", "Athan", "Athanasios ", "Athanasius ", "Charis ", "Christodoulos", "Christos ", "Chrysanthos", "Costas", "Cyriacus ", "Damaskinos", "Damian ", "Demetre", "Demetrius", "Dimitris", "Dysmas ", "Eleutherios", "Elias", "Emmanouil", "Eustathius", "Evangelos", "Saint George", "Georgios", "Giorgos", "Gregory ", "Homer ", "Ioannis", "Isidore", "Jason ", "John ", "Joseph", "Kokos", "Konstantinos", "Lambros", "Lefter", "Leonidas ", "Loukas", "Lycurgus", "Manolis", "Marcos ", "Mario ", "Marios", "Matthaios", "Miltiades ", "Mitsos", "Nestor ", "Nicephorus", "Nicetas", "Nicholas", "Nikolaos", "Nikos", "Orestes ", "Panagiotis", "Pantelis", "Paraskevas ", "Paris ", "Pavlos", "Perikles ", "Peter ", "Phaedon ", "Plutarch ", "Polychronis", "Pygmalion ", "Sakis", "Sotirios", "Sotiris", "Spiridon", "Spiro ", "Spyridon", "Stathis", "Stavros", "Stelios", "Tassos", "Thanasis", "Thanos ", "Themistocles ", "Theodore ", "Theofanis", "Theophilus", "Therapont", "Timothy ", "Ulysses ", "Vassilios", "Yannis", "Zenobios", "Zoilos" ];
         var GREEKSURNAMES = [ "afroudakis", "alexandris", "alexandrou", "alexiou", "alexopoulos", "anastasopoulos", "andreadis", "andreou", "andrianopoulos", "androulakis", "angelopoulos", "antoniadis", "antoniou", "antonopoulos", "apostolidis", "apostolou", "argyropoulos", "argyros", "athanasiadis", "avramidis", "bakirtzis", "bakoyannis", "batziolas", "bernardakis", "botsaris", "botsis", "calathes", "calazans", "calligaris", "carras", "cassavetes", "chalkias", "cholevas", "chondroyannos", "christakis", "christodoulopoulos", "christodoulou", "christopoulos", "christos ", "christou", "cirillo", "cora", "costas", "daskalakis", "diamantopoulos", "dimas ", "dimitriadis", "dimitriou", "dimopoulos", "dousmanis", "doxiadis", "dragoumis", "fotakis", "fotilas", "fotiou", "fotopoulos", "frangos ", "galifianakis ", "gavalas", "gavras", "gazis", "georgiadis", "georgiou", "giannakopoulos", "giannopoulos", "glezos", "hatzi", "hatzidakis", "hatzimichalis", "hatzis", "hrisoverghi", "iakovou", "iliopoulos", "ioannidis", "ioannou", "kafatos", "kaklamanis", "kalogeropoulos", "kanakaris", "karas ", "karras", "katechis", "katrakis", "katsifaras", "kefalogiannis", "kiriakidis", "kokkinakis", "kolettis", "konstantinidis", "konstantinou", "konstantopoulos", "kontogouris", "kontos", "kotzias", "koufos", "koundouros", "kourakis", "koutsis", "koutsopoulos", "krestenitis", "kriezis", "kyriakou", "kyrkos", "labropoulos", "lambrakis", "latsis", "leandros", "leichoudes", "lekkas", "leon ", "leventis", "liourdis", "logothetis", "louganis", "loverdos", "maimonides ", "makris", "manetas", "manolas", "manousakis", "mantalos", "mantzaris", "marangos", "mardas", "margaritis", "markakis", "markopoulos", "matraxia", "matsoukas", "miaoulis", "michailidis", "mitropoulos", "mitsotakis", "mitzou", "moustakas", "moysiadis", "nafpliotis", "nakos", "nerantzis", "nevrakis", "nikolaidis", "nikolopoulos", "nikoloudis", "notaras", "oikonomopoulos", "oikonomou", "orologas", "pallis", "panagakos", "panagiotopoulos", "panayiotou", "panousis", "papachristos", "papadakis", "papadiamantopoulos", "papadopoulos", "papageorgiou", "papageorgopoulos", "papaioannou", "papajohn", "papakonstantinou", "papanastasiou", "papandreou", "papanikolaou", "papantoniou", "papathanasiou", "papazoglou", "papoulias", "pappas", "paraskevas ", "paraskevopoulos", "pavlidis", "pavlopoulos", "pavlou", "petimezas", "petinos", "petridis", "philippidis", "rallis", "raskopoulos", "rodocanachi", "roubanis", "rouphos", "roussopoulos", "sakellaridis", "sakellarios ", "samaras", "savalas", "savva", "savvas ", "servopoulos", "sgouros", "sifakis", "simopoulos", "sisinis", "skarlatos", "skourletis", "spanos", "spheeris" ];
 
-        function makeTulpa (x, y) {
+        var name;
+        var tagline;
+        var nationality;
+
+        function makeTulpa (x, y, name, tagline) {
           var tulpa = {};
           tulpa.position = makePoint (x, y);
           tulpa.memes = [];
           tulpa.tulpas = [];
+          tulpa.name = name;
+          tulpa.tagline = tagline;
           var name = randomName();
           return tulpa;
         }
 
         var tulpas = [];
         for (var i = 0; i < 10; i++) {
-          tulpas.push(makeTulpa(Math.random() * 10, Math.random() * 10));
+          //tulpas.push(makeTulpa(Math.random() * 10, Math.random() * 10));
         }
+        console.log(tulpas);
 
         // todo
         function randomMeme () {
@@ -121,7 +139,7 @@
           var OCCUPATION = [ 'engineer', 'troll', 'neet', 'designer', 'magician', 'mathematician', 'researcher', 'ironist', 'author', 'shitposter', 'scientist', 'astrologist', 'alchemist', 'sage', 'bard', 'shaman', 'druid', 'philosopher', 'rapper', 'spy', 'prostitute', 'sex worker', 'poet', 'retiree', 'software developer', 'barista', 'marine', 'cop', 'wizard', 'makeup artist', 'artist', 'janitor', 'guitarist', 'journalist', 'blogger', 'camwhore', 'thief', 'DRUG dealer', 'grifter', 'truck driver', 'mercenary', 'doctor', 'mechanic', 'translator', 'florist', 'thought leader', 'consultant', 'ux designer', 'digital nomad', 'professor', 'dj', 'hacker', 'clown', 'politician', 'lawyer', 'product manager', 'haberdasher', 'soprano', 'educator', 'pedagogue', 'technocrat', 'startup founder', 'vp of PLURAL', 'director of PLURAL', 'master of PLURAL', 'necromancer', 'priest', 'druid', 'monk', 'occultist', 'blogger', 'vlogger', 'seasteader', 'venture capitalist', 'GAME player', 'playwright', 'linguist', 'pornstar', 'escort', 'falconer', 'intellectual', 'activist', 'BEAST breeder', 'BEAST tender', 'BEAST collector', 'BEAST trainer', 'BEAST tamer', 'BEAST wrangler', 'BEAST wrangler', 'breeder of BEASTs', 'sampler of DRUG', 'sampler of drugs', 'proprietor of PLURAL', 'proprietor of BEASTs', 'emasculator', 'drowner', 'pauper', 'BEAST catcher', 'BEAST walker', 'examiner of PLURAL', 'proprietor of PLURAL', 'purveyor of PLURAL', 'BEAST tipper', 'BEAST shaver', 'BEAST hunter', 'purveyor of BEAST skins', 'purveyor of FABRIC', 'purveyor of FABRIC SHIRTs', 'purveyor of GEM encrusted FABRIC SHIRTs', 'BEAST feeder', 'examiner of BEASTs' ];
           var PREFIX = [ 'hyper', 'uber', 'meta', 'paleo', 'anarcho', 'xeno', 'post', 'anti', 'nu-', 'geo', 'neo', 'reconstructionist ', 'liberal ', 'conservative ', 'ultra', 'eco', 'crypto', 'reactionary ', 'revisionist ', 'queer ', 'radical ', 'moderate ', 'cyber', 'intersectionalist ', 'esoteric ' ];
           var IDEOLOGY = [ 'communist', 'capitalist', 'feminist', 'maoist', 'stalinist', 'primitivist', 'syndicalist', 'collectivist', 'egoist', 'platonist', 'realist', 'syndicalist','rationalist', 'modernist', 'singularian', 'fascist', 'natalist', 'naturist', 'democrat', 'conservative', 'liberal', 'nationalist', 'agrarian', 'federalist', 'isolationist', 'monarchist', 'libertarian', 'environmentalist', 'meninist', 'masculinist', 'progressivist', 'republican', 'socialist', 'islamist', 'zionist', 'radicalist', 'baathist', 'nasserist', 'arabist', 'jihadist', 'voluntarist', 'nazi' ];
-          var CELEBRITY = [ 'zizek', 'dawkins', 'marx', 'trotsky', 'mao', 'cher', 'beyonce', 'kanye', 'kim kardashian', 'dril', 'stirner', 'nietzsche', 'plato', 'spinoza', 'kant', 'hegel', 'obama', 'trump', 'kissinger', 'putin', 'harambe', 'trudeau', 'stalin', 'lenin', 'kurzweil', 'peter thiel', 'eliezer yudkowsky', 'dhh', 'steve jobs', 'richard stallman', 'herzl', 'arafat', 'hillary', 'oprah', 'bjork', 'david bowie', 'kierkegaard', 'murakami', 'manson', 'kaczynski', 'foucault', 'goethe', 'derrida', 'adam sandler', 'bill cosby', 'bernie sanders', 'ron paul', 'pkd', 'weev', 'milo yiannopoulos', 'malcolm x', 'mlk', 'missy elliot', 'tom waits', 'jimmy carter', 'lady gaga', 'michael jackson', 'tupac', 'eminem', 'prince', 'snoop dogg', 'lil wayne', 'kendrick lamar', 'nas', 'rumi', 'maharishi', 'madonna', 'elvis', 'grr martin', 'david lynch', 'alan moore', 'martin scorsese', 'christopher nolan', 'tim burton', 'george lucas', 'hitler', 'stalin', 'mao zedong', 'kim jong il', 'kim jong un', 'donald trump', 'bill clinton', 'saddam hussein', 'gaddafi', 'bashar al assad', 'netanyahu', 'chelsea clinton', 'modi', 'queen elizabeth', 'michael jackson', 'lil kim', 'nicki minaj', 'iggy azalea', 'sadat', 'nasser', 'nassim taleb', 'bill nye', 'neil degrasse tyson' ];
+          var CELEBRITY = [ 'zizek', 'dawkins', 'marx', 'trotsky', 'mao', 'cher', 'beyonce', 'kanye', 'kim kardashian', 'dril', 'stirner', 'nietzsche', 'plato', 'spinoza', 'kant', 'hegel', 'obama', 'trump', 'kissinger', 'putin', 'harambe', 'trudeau', 'stalin', 'lenin', 'kurzweil', 'peter thiel', 'eliezer yudkowsky', 'dhh', 'steve jobs', 'richard stallman', 'herzl', 'arafat', 'hillary', 'oprah', 'bjork', 'david bowie', 'kierkegaard', 'murakami', 'manson', 'kaczynski', 'foucault', 'goethe', 'derrida', 'adam sandler', 'bill cosby', 'bernie sanders', 'ron paul', 'pkd', 'weev', 'milo yiannopoulos', 'malcolm x', 'mlk', 'missy elliot', 'tom waits', 'jimmy carter', 'lady gaga', 'michael jackson', 'tupac', 'eminem', 'prince', 'snoop dogg', 'lil wayne', 'kendrick lamar', 'nas', 'rumi', 'maharishi', 'madonna', 'elvis', 'grr martin', 'david lynch', 'alan moore', 'martin scorsese', 'christopher nolan', 'tim burton', 'george lucas', 'hitler', 'stalin', 'mao zedong', 'kim jong il', 'kim jong un', 'donald trump', 'bill clinton', 'saddam hussein', 'gaddafi', 'bashar al assad', 'netanyahu', 'chelsea clinton', 'modi', 'queen elizabeth', 'michael jackson', 'lil kim', 'nicki minaj', 'iggy azalea', 'sadat', 'nasser', 'nassim taleb', 'bill nye', 'neil degrasse tyson', 'jordan peterson' ];
           var VERY = [ 'very', 'fiercely', 'zealously', 'rather', 'singularly', 'distinctly', 'relatively', 'darn', 'mighty', 'devilishly', 'remarkably', 'highly', 'vaguely', 'faintly' ];
           var WRT = [ 'when it comes to', 'with regard to', 'around' ];
           var FAN = [ 'fan', 'fanboy', 'worshipper', 'admirer', 'acolyte' ];
@@ -423,10 +441,13 @@
           blondie = (nationality === 'finn' || nationality === 'swede' || nationality === 'german' || nationality === 'ukrainian' || nationality === 'russian');
           asian   = (nationality === 'mongol' || nationality === 'korean');
           
-          document.getElementById("char-attribute").innerHTML = randomAttribute();
-          document.getElementById("char-name").innerHTML = randomName(nationality, gender);
           document.getElementById("spinner").style.display = 'none';
           document.getElementById("canvas").style.display = 'inline';
+
+          tagline = randomAttribute();
+          name = randomName(nationality, gender);
+          document.getElementById("char-name").innerHTML = name;
+          document.getElementById("char-attribute").innerHTML = tagline;
 
           var hairColors = {
             black: { h: 0, s: 0, l: -1 },
@@ -590,8 +611,21 @@
           return [h, s, l];
         }
 
-        document.getElementById("hot").onclick = drawRandom;
         document.getElementById("not").onclick = drawRandom;
+
+        document.getElementById("hot").onclick = function() {
+          tulpas.push(makeTulpa(Math.random() * 10, Math.random() * 10, name, tagline));
+          $("#canvas").appendTo("#accepted").attr("id","tulpa-" + tulpas.length).on("click",function() {
+            $("#char-name").html(tulpas[  parseInt($(this).attr("id").split("-")[1]) - 1 ].name);
+            $("#char-attribute").html(tulpas[  parseInt($(this).attr("id").split("-")[1]) - 1 ].tagline);
+            $("#canvas").detach();
+            $(this).attr("id","canvas").prependTo("#char");
+          });
+          $("#char").prepend('<canvas id="canvas" width=100 height=100 style="display:none;"></canvas>');
+          console.log(tulpas);
+          drawRandom();
+        }
+
       
       }
     </script>
@@ -607,6 +641,8 @@
       <div>
       <button id="hot">😍</button>
       <button id="not">👎</button>
+      </div>
+      <div id="accepted">
       </div>
     </div>
   </body>
