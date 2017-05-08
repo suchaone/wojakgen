@@ -171,7 +171,7 @@
           var FABRIC = [ 'wool', 'cotton', 'silk', 'sheer silk', 'merino wool', 'leather', 'pleather', 'latex', 'rubber', 'spandex', 'BEAST hide', 'BEAST skin', 'fur', 'denim', 'gore-tex', 'lace', 'burlap', 'canvas', 'cashmere', 'chino', 'chiffon', 'felt', 'fishnet', 'flannel', 'satin', 'mesh' ];
           var GAME = [ 'pokemon', 'super mario', 'mortal kombat', 'zelda', 'sim city', 'minecraft', 'civ3', 'dota', 'league', 'starcraft', 'diablo', 'ddr', 'quake', 'tic-tac-toe', 'd&d', 'undertale', 'portal', 'overwatch', 'warcraft', 'everquest', 'street fighter', 'contra', 'donkey kong', 'pong', 'halo', 'counter-strike', 'red alert', 'joust', 'dota', 'basketball', 'football', 'baseball', 'pinball', 'hockey', 'badminton', 'tennis', 'squash', 'bowling', 'bocce', 'petanque', 'volleyball', 'foozeball', 'ball', 'golf', 'polo', 'water polo', 'calvinball', 'beer pong', 'poker', 'durak', 'go fish', 'go', 'chess', 'checkers', 'monopoly', 'cards against humanity', 'mahjong', 'tekken', 'metal slug', 'golden axe', 'farmville', 'candy crush' ];
           var SHIRT = [ 'shirt', 'vest', 'cape', 'onesie', 'leotard', 'coat', 'cloak', 'tuxedo', 'jacket', 'frock', 'robe', 'polo', 'onesie', 'tunic', 'cardigan', 'suit', 'pantsuit', 'poncho', 'mask', 'robe', 'vest', 'apron' ];
-          var FOOD = [ 'FRUIT', 'FRUIT cake', 'FRUIT pie', 'deep fried BEAST', 'deep fried BEAST brains', 'deep fried BEAST hearts', 'roast BEAST with FRUIT sauce', 'braised BEAST', 'FRUIT pie', 'FRUIT salad', 'meat', 'liver', 'BEAST liver', 'BEAST meat', 'raw BEAST', 'BEAST stir fry', 'fermented BEAST meat', 'cured BEAST meat', 'lasagna', 'pizza', 'rice', 'beans', 'chickpeas', 'hummus', 'taihini', 'pickles', 'shawarma', 'falafel', 'shakshuka', 'poutine', 'cheesecake', 'cheesesteaks', 'burgers', 'fries', 'sushi', 'soba', 'udon', 'ramen', 'oatmeal', 'gruel', 'oats', 'cereal', 'cornflakes', 'soup', 'quinoa', 'buckwheat', 'rye', 'borscht', 'tapas', 'steak', 'caviar', 'mac and cheese', 'chorizo', 'tacos', 'BEAST meat tacos', 'BEAST meat burritos', 'burritos', 'churros', 'doughnuts', 'pasta', 'paella', 'beef patties', 'cheese', 'mozzarella', 'spice', 'nachos', 'dumplings', 'wontons', 'chicken soup', 'pho', 'eel', 'chicken', 'beef', 'mutton', 'roast BEAST', 'BEAST jerky', 'minced BEAST', 'fried BEAST', 'minced BEAST dumplings', 'BEAST sausage', 'BEAST burgers', 'BEAST soup', 'BEAST stew', 'BEAST patties', 'BEAST skewers', 'pudding' ];
+          var FOOD = [ 'FRUIT', 'FRUIT cake', 'FRUIT pie', 'deep fried BEAST', 'deep fried BEAST brains', 'deep fried BEAST hearts', 'roast BEAST with FRUIT sauce', 'braised BEAST', 'FRUIT pie', 'FRUIT salad', 'meat', 'liver', 'BEAST liver', 'BEAST meat', 'raw BEAST', 'BEAST stir fry', 'fermented BEAST meat', 'cured BEAST meat', 'lasagna', 'pizza', 'rice', 'beans', 'chickpeas', 'hummus', 'taihini', 'pickles', 'shawarma', 'falafel', 'shakshuka', 'poutine', 'cheesecake', 'cheesesteaks', 'burgers', 'fries', 'sushi', 'soba', 'udon', 'ramen', 'oatmeal', 'gruel', 'oats', 'cereal', 'cornflakes', 'soup', 'quinoa', 'buckwheat', 'rye', 'borscht', 'tapas', 'steak', 'caviar', 'mac and cheese', 'chorizo', 'tacos', 'BEAST meat tacos', 'BEAST meat burritos', 'burritos', 'churros', 'doughnuts', 'pasta', 'paella', 'beef patties', 'cheese', 'mozzarella', 'spice', 'nachos', 'dumplings', 'wontons', 'chicken soup', 'pho', 'eel', 'chicken', 'beef', 'mutton', 'roast BEAST', 'BEAST jerky', 'minced BEAST', 'fried BEAST', 'minced BEAST dumplings', 'BEAST sausage', 'BEAST burgers', 'BEAST soup', 'BEAST stew', 'BEAST patties', 'BEAST skewers', 'pudding', 'kfc', 'chicken tendies' ];
           var GENRE = [ 'folk', 'rock', 'blues', 'jazz', 'rap', 'country', 'punk', 'funk', 'chiptunes' ];
           var MUSIC = [ 'GENRE', 'PREFIXGENRE', 'acid GENRE', 'synth GENRE', 'RELIGION GENRE' ];
           var HUMANS = [ 'women', 'girls', 'ladies', 'females', 'dames', 'chicks', 'babes', 'men', 'dudes', 'boys', 'lads', 'guys', 'hotties', 'bimbos', 'sluts', 'cholas', 'gals'];
@@ -544,8 +544,8 @@
         images.set('mouth',  new Array(9));
         images.set('brows',  new Array(6));
         images.set('shirt',  new Array(8));
-        images.set('hair',   new Array(29));
-        images.set('beard',  new Array(9));
+        images.set('hair',   new Array(30));
+        images.set('beard',  new Array(12));
         images.set('stache', new Array(6));
 
         var imagesToLoad = 0;
@@ -573,15 +573,11 @@
 
           //gender = pickRandom(['male','female']);
           gender = 'male';
-          if (Math.random() > 0.3)
-            nationality = pickRandom(NATIONALITY); // todo shouldn't be global
-          else
-            nationality = 'american';
-
+          nationality = pickRandom(NATIONALITY); // todo shouldn't be global
 
           religion = pickRandom(RELIGION);
 
-          if (nationality !== 'israeli' && nationality !== 'jew' && (religion === 'jewish' || religion === 'orthodox jewish')) 
+          if ((nationality !== 'israeli' && nationality !== 'jew' && (religion === 'jewish' || religion === 'orthodox jewish')) || (nationality !== 'desi' && (religion === 'hindu' || religion === 'sikh')))
             religion = 'atheist';
 
           if (nationality === 'israeli' || nationality === 'jew') {
@@ -592,7 +588,7 @@
           } else if (nationality === 'arab' || nationality === 'algerian' || nationality === 'saudi' || nationality === 'palestinian' || nationality === 'turk' || nationality === 'egyptian' || nationality === 'uzbek' || nationality === 'indonesian' || nationality === 'albanian') {
             religion = 'muslim';
           } else if (nationality === 'desi') {
-            if (Math.random() > .3)
+            if (Math.random() > .5)
               religion = 'hindu';
             else
               religion = 'sikh';
@@ -646,7 +642,10 @@
 
           ctx.clearRect(0, 0, 100, 100);
           images.forEach(function(value, key) {
-            if ((key == 'beard') && (religion === 'orthodox jewish' || religion === 'sikh')) {
+            if (key == 'beard' && religion === 'sikh') {
+              draw(value[9], hairShift);
+              return 0;
+            } else if ((key == 'beard') && (religion === 'orthodox jewish' || religion === 'sikh')) {
               draw(value[3], hairShift);
               return 0;
             } else if ((key == 'stache') && (religion === 'orthodox jewish' || religion === 'sikh')) {
@@ -678,7 +677,9 @@
             else if ((nationality === 'saudi' || nationality === 'bedouin') && key === 'hair')
               draw(value[27]);
             else if (religion === 'sikh' && key === 'hair')
-              draw(value[28]);
+              draw(value[28], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
+            else if (religion === 'orthodox jewish' && key === 'hair')
+              draw(value[29], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
             else if ((key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
               draw(pickRandom(value), hairShift);
             else if (key == 'hair')
