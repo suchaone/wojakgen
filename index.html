@@ -76,19 +76,23 @@
         var ADJECTIVE     = [ 'deranged', 'deluded', 'uncanny', 'wayward', 'fiery', 'big', 'tiny', 'violent', 'lying', 'omnipresent', 'omniscient', 'fearful', 'brave', 'friendly', 'playful' ];
         var NATIONALITY   = [ 'canadian', 'american', 'russian', 'ukrainian', 'european', 'german', 'uzbek', 'albanian', 'algerian', 'armenian', 'australian', 'brit', 'dane', 'finn', 'swede', 'filipino', 'georgian', 'greek', 'israeli', 'macedonian', 'mongol', 'polack', 'spaniard', 'turk', 'arab', 'saudi', 'bedouin', 'algerian', 'egyptian', 'ethiopian', 'palestinian', 'jew', 'serb', 'indonesian', 'korean', 'armenian', 'aramean', 'gypsy', 'goy', 'mexican', 'cuban', 'colombian', 'african american', 'black', 'viet', 'desi' ];
         var RELIGION      = [ 'christian', 'jewish', 'zoroastrian', 'animist', 'atheist', 'gnostic', 'agnostic', 'hindu', 'sikh', 'orthodox', 'catholic', 'sunni', 'shia', 'sufi', 'orthodox jewish', 'russian orthodox', 'protestant', 'baptist', 'satanist', 'taoist', 'buddhist' ];
-        var GREEKNAMES    = [ "Acamas", "Alekos", "Alexander", "Alexis", "Alexius", "Anastasius", "Andreas", "Angelos ", "Apostolos ", "Ari ", "Aristophanes ", "Athan", "Athanasios ", "Athanasius ", "Charis ", "Christodoulos", "Christos ", "Chrysanthos", "Costas", "Cyriacus ", "Damaskinos", "Damian ", "Demetre", "Demetrius", "Dimitris", "Dysmas ", "Eleutherios", "Elias", "Emmanouil", "Eustathius", "Evangelos", "Saint George", "Georgios", "Giorgos", "Gregory ", "Homer ", "Ioannis", "Isidore", "Jason ", "John ", "Joseph", "Kokos", "Konstantinos", "Lambros", "Lefter", "Leonidas ", "Loukas", "Lycurgus", "Manolis", "Marcos ", "Mario ", "Marios", "Matthaios", "Miltiades ", "Mitsos", "Nestor ", "Nicephorus", "Nicetas", "Nicholas", "Nikolaos", "Nikos", "Orestes ", "Panagiotis", "Pantelis", "Paraskevas ", "Paris ", "Pavlos", "Perikles ", "Peter ", "Phaedon ", "Plutarch ", "Polychronis", "Pygmalion ", "Sakis", "Sotirios", "Sotiris", "Spiridon", "Spiro ", "Spyridon", "Stathis", "Stavros", "Stelios", "Tassos", "Thanasis", "Thanos ", "Themistocles ", "Theodore ", "Theofanis", "Theophilus", "Therapont", "Timothy ", "Ulysses ", "Vassilios", "Yannis", "Zenobios", "Zoilos" ];
+        var GREEKNAMES    = [[ "Acamas", "Alekos", "Alexander", "Alexis", "Alexius", "Anastasius", "Andreas", "Angelos ", "Apostolos ", "Ari ", "Aristophanes ", "Athan", "Athanasios ", "Athanasius ", "Charis ", "Christodoulos", "Christos ", "Chrysanthos", "Costas", "Cyriacus ", "Damaskinos", "Damian ", "Demetre", "Demetrius", "Dimitris", "Dysmas ", "Eleutherios", "Elias", "Emmanouil", "Eustathius", "Evangelos", "Saint George", "Georgios", "Giorgos", "Gregory ", "Homer ", "Ioannis", "Isidore", "Jason ", "John ", "Joseph", "Kokos", "Konstantinos", "Lambros", "Lefter", "Leonidas ", "Loukas", "Lycurgus", "Manolis", "Marcos ", "Mario ", "Marios", "Matthaios", "Miltiades ", "Mitsos", "Nestor ", "Nicephorus", "Nicetas", "Nicholas", "Nikolaos", "Nikos", "Orestes ", "Panagiotis", "Pantelis", "Paraskevas ", "Paris ", "Pavlos", "Perikles ", "Peter ", "Phaedon ", "Plutarch ", "Polychronis", "Pygmalion ", "Sakis", "Sotirios", "Sotiris", "Spiridon", "Spiro ", "Spyridon", "Stathis", "Stavros", "Stelios", "Tassos", "Thanasis", "Thanos ", "Themistocles ", "Theodore ", "Theofanis", "Theophilus", "Therapont", "Timothy ", "Ulysses ", "Vassilios", "Yannis", "Zenobios", "Zoilos" ], [ 'Alexandra', 'Alina', 'Amalia', 'Amaryllis', 'Anastasia', 'Angeliki', 'Angelina', 'Anna', 'Callisto', 'Carissa', 'Cassandra', 'Charis', 'Chloe', 'Christa', 'Christina', 'Christine', 'Crino', 'Cynthia', 'Daphne', 'Despina', 'Dina', 'Dolores', 'Dorothea', 'Eftychia', 'Ekaterini', 'Elektra', 'Elena', 'Eleni', 'Eliana', 'Elina', 'Eudoxia', 'Eunice', 'Euthemia', 'Fotini', 'Georgia', 'Georgiana', 'Giada', 'Helen', 'Helena', 'Helene', 'Hermione', 'Hero', 'Hilda', 'Ioanna', 'Irene', 'Ivy', 'Julia', 'Karina', 'Lena', 'Lydia', 'Margaret', 'Maria', 'Marianne', 'Mary', 'Medea', 'Melania', 'Melina', 'Melissa', 'Moira', 'Nadia', 'Natalia', 'Nika', 'Nikoleta', 'Nikolina', 'Nina', 'Olga', 'Olympias', 'Panorea', 'Paraskevi', 'Philippa', 'Phoebe', 'Sandra', 'Sophia', 'Sotiria', 'Stamatia', 'Stefania', 'Tatiana', 'Theodora', 'Valeria', 'Vassiliki', 'Yianna', 'Zenobia', 'Zoe' ]];
         var GREEKSURNAMES = [ "afroudakis", "alexandris", "alexandrou", "alexiou", "alexopoulos", "anastasopoulos", "andreadis", "andreou", "andrianopoulos", "androulakis", "angelopoulos", "antoniadis", "antoniou", "antonopoulos", "apostolidis", "apostolou", "argyropoulos", "argyros", "athanasiadis", "avramidis", "bakirtzis", "bakoyannis", "batziolas", "bernardakis", "botsaris", "botsis", "calathes", "calazans", "calligaris", "carras", "cassavetes", "chalkias", "cholevas", "chondroyannos", "christakis", "christodoulopoulos", "christodoulou", "christopoulos", "christos ", "christou", "cirillo", "cora", "costas", "daskalakis", "diamantopoulos", "dimas ", "dimitriadis", "dimitriou", "dimopoulos", "dousmanis", "doxiadis", "dragoumis", "fotakis", "fotilas", "fotiou", "fotopoulos", "frangos ", "galifianakis ", "gavalas", "gavras", "gazis", "georgiadis", "georgiou", "giannakopoulos", "giannopoulos", "glezos", "hatzi", "hatzidakis", "hatzimichalis", "hatzis", "hrisoverghi", "iakovou", "iliopoulos", "ioannidis", "ioannou", "kafatos", "kaklamanis", "kalogeropoulos", "kanakaris", "karas ", "karras", "katechis", "katrakis", "katsifaras", "kefalogiannis", "kiriakidis", "kokkinakis", "kolettis", "konstantinidis", "konstantinou", "konstantopoulos", "kontogouris", "kontos", "kotzias", "koufos", "koundouros", "kourakis", "koutsis", "koutsopoulos", "krestenitis", "kriezis", "kyriakou", "kyrkos", "labropoulos", "lambrakis", "latsis", "leandros", "leichoudes", "lekkas", "leon ", "leventis", "liourdis", "logothetis", "louganis", "loverdos", "maimonides ", "makris", "manetas", "manolas", "manousakis", "mantalos", "mantzaris", "marangos", "mardas", "margaritis", "markakis", "markopoulos", "matraxia", "matsoukas", "miaoulis", "michailidis", "mitropoulos", "mitsotakis", "mitzou", "moustakas", "moysiadis", "nafpliotis", "nakos", "nerantzis", "nevrakis", "nikolaidis", "nikolopoulos", "nikoloudis", "notaras", "oikonomopoulos", "oikonomou", "orologas", "pallis", "panagakos", "panagiotopoulos", "panayiotou", "panousis", "papachristos", "papadakis", "papadiamantopoulos", "papadopoulos", "papageorgiou", "papageorgopoulos", "papaioannou", "papajohn", "papakonstantinou", "papanastasiou", "papandreou", "papanikolaou", "papantoniou", "papathanasiou", "papazoglou", "papoulias", "pappas", "paraskevas ", "paraskevopoulos", "pavlidis", "pavlopoulos", "pavlou", "petimezas", "petinos", "petridis", "philippidis", "rallis", "raskopoulos", "rodocanachi", "roubanis", "rouphos", "roussopoulos", "sakellaridis", "sakellarios ", "samaras", "savalas", "savva", "savvas ", "servopoulos", "sgouros", "sifakis", "simopoulos", "sisinis", "skarlatos", "skourletis", "spanos", "spheeris" ];
-        var RUSNAMES      = [ 'alexei', 'andrei', 'arkady', 'anton', 'anatoly', 'artyom', 'boris', 'vadim', 'valentin', 'vlad', 'vladimir', 'vladislav', 'igor', 'yuri', 'sergei', 'nikita' ];
-        var SWEDENAMES    = [ 'William', 'Lucas', 'Liam', 'Oscar', 'Elias', 'Hugo', 'Oliver', 'Charlie', 'Axel', 'Vincent', 'Alexander', 'Noah', 'Leo', 'Ludvig', 'Adam', 'Arvid', 'Nils', 'Elliot', 'Filip', 'Leon', 'Melvin', 'Viktor', 'Valter', 'Edvin', 'Benjamin', 'Isak', 'Alfred', 'Theo', 'Emil', 'Harry', 'Olle', 'Love', 'Theodor', 'Anton', 'Sixten', 'Erik', 'Adrian', 'Albin', 'Gustav', 'Melker', 'Malte', 'Ebbe', 'Mohamed', 'Gabriel', 'Alvin', 'Max', 'August', 'Josef', 'Viggo', 'Casper', 'Colin', 'Sam', 'Noel', 'Loke', 'Loui', 'Henry', 'Wilmer', 'Kevin', 'Sigge', 'Vidar', 'Carl', 'Jacob', 'Frank', 'Jonathan', 'Matteo', 'Milton', 'Jack', 'Milo', 'Elton', 'Felix', 'Ville', 'Simon', 'Wilhelm', 'Samuel', 'Vilgot', 'Julian', 'Otto', 'Sebastian', 'John', 'Elis', 'Daniel', 'Ivar', 'Joel', 'Tage', 'David', 'Aron', 'Hjalmar', 'Kian', 'Rasmus', 'Eddie', 'Maximilian', 'Algot', 'Linus', 'Alex', 'Ali', 'Edward', 'Ture', 'Elvin', 'Folke' ];
-        var JEWNAMES      = [ 'amos', 'ariel', 'ari', 'avigdor', 'benyamin', 'boaz', 'chaim', 'david', 'eli', 'moshe'] 
+        var RUSNAMES      = [[ 'alexei', 'andrei', 'arkady', 'anton', 'anatoly', 'artyom', 'boris', 'vadim', 'valentin', 'vlad', 'vladimir', 'vladislav', 'igor', 'yuri', 'sergei', 'nikita' ], [ 'tanya', 'katya', 'natasha', 'anna', 'lena', 'svetlana', 'valeria', 'xenia', 'zoya', 'nina', 'oksana', 'marina', 'irina', 'inna', 'antastasia' ]];
+        var SWEDENAMES    = [[ 'William', 'Lucas', 'Liam', 'Oscar', 'Elias', 'Hugo', 'Oliver', 'Charlie', 'Axel', 'Vincent', 'Alexander', 'Noah', 'Leo', 'Ludvig', 'Adam', 'Arvid', 'Nils', 'Elliot', 'Filip', 'Leon', 'Melvin', 'Viktor', 'Valter', 'Edvin', 'Benjamin', 'Isak', 'Alfred', 'Theo', 'Emil', 'Harry', 'Olle', 'Love', 'Theodor', 'Anton', 'Sixten', 'Erik', 'Adrian', 'Albin', 'Gustav', 'Melker', 'Malte', 'Ebbe', 'Mohamed', 'Gabriel', 'Alvin', 'Max', 'August', 'Josef', 'Viggo', 'Casper', 'Colin', 'Sam', 'Noel', 'Loke', 'Loui', 'Henry', 'Wilmer', 'Kevin', 'Sigge', 'Vidar', 'Carl', 'Jacob', 'Frank', 'Jonathan', 'Matteo', 'Milton', 'Jack', 'Milo', 'Elton', 'Felix', 'Ville', 'Simon', 'Wilhelm', 'Samuel', 'Vilgot', 'Julian', 'Otto', 'Sebastian', 'John', 'Elis', 'Daniel', 'Ivar', 'Joel', 'Tage', 'David', 'Aron', 'Hjalmar', 'Kian', 'Rasmus', 'Eddie', 'Maximilian', 'Algot', 'Linus', 'Alex', 'Ali', 'Edward', 'Ture', 'Elvin', 'Folke' ], [ 'Agatha', 'Agnes', 'Aina', 'Albina', 'Amalia', 'Amelia', 'Anna', 'Anneli', 'Anneliese', 'Antonia', 'Aurora', 'Beata', 'Birgitta', 'Bodil', 'Britta', 'Carin', 'Carolina', 'Caroline', 'Cecilie', 'Charlotte', 'Christa', 'Dagmar', 'Ebba', 'Elín', 'Elina', 'Ellen', 'Elsa', 'Emma', 'Erika', 'Estelle', 'Filippa', 'Frida', 'Göta', 'Greta', 'Grete', 'Gun', 'Gunilla', 'Gunnel', 'Heidi', 'Helena', 'Helene', 'Helga', 'Henrika', 'Hilda', 'Hildur', 'Hulda', 'Imogen', 'Indira', 'Ingrid', 'Isa', 'Isabella', 'Judith', 'Justina', 'Kajsa', 'Karen', 'Karin', 'Katarina', 'Katja', 'Kerstin', 'Krista', 'Kristi', 'Kristin', 'Lina', 'Linnéa', 'Love', 'Lovisa', 'Malin', 'Margareta', 'Maria', 'Marianne', 'Monika', 'Nina', 'Olivia', 'Pearl', 'Pernilla', 'Petunia', 'Rebecka', 'Richenza', 'Rita', 'Ronja', 'Selma', 'Susanna', 'Susanne', 'Tara', 'Tove', 'Ulrica', 'Valerie', 'Veronica', 'Victoria', 'Ylva' ]];
+        var JEWNAMES      = [[ 'amos', 'ariel', 'ari', 'avigdor', 'benyamin', 'boaz', 'chaim', 'david', 'eli', 'moshe'], ['avital', 'carmel', 'deborah', 'efrat', 'ilana', 'maya', 'naama', 'rache', 'sarah', 'tal']];
         var VIETSURNAMES  = [ 'nguyen', 'tran', 'le', 'pham', 'huynh', 'phan', 'vu', 'vo', 'dang', 'ngo', 'do', 'bui', 'ho', 'duong' ];
-        var WHITENAMES    = [ 'james', 'john', 'robert', 'michael', 'david', 'richard', 'daniel', 'paul', 'mark', 'donald', 'george', 'steve', 'jeff', 'larry', 'josh', 'dennis', 'carl', 'harold', 'doug', 'joe', 'justin', 'harry', 'bruce', 'aaron', 'jesse', 'craig', 'leonard', 'stanley', 'nate', 'alex', 'leo', 'tim', 'zack', 'brad', 'neil', 'jim', 'bob', 'bobby', 'xander', 'ethan', 'adam', 'baxter', 'caleb', 'matt', 'robert', 'robin', 'gabriel', 'gabe', 'ray', 'raymond', 'phil', 'toby', 'bart', 'arlo', 'abel', 'ace', 'adir', 'aidan', 'aiden', 'al', 'alvin', 'andre', 'ansel', 'anthony', 'tony', 'antoine', 'aric', 'arnie', 'arnold', 'arthur', 'austin', 'barney', 'barry', 'benjamin', 'ben', 'brandon', 'brent', 'chad', 'bryan', 'buster', 'calvin', 'casey', 'cecil', 'cedric', 'chase', 'chandler', 'charlie', 'chip', 'chris', 'christopher', 'claude', 'cletus', 'cliff', 'cody', 'cyril', 'cyrus', 'damion', 'dan', 'darcy', 'darian', 'darren', 'daryl', 'dean', 'shawn', 'dominic', 'douggie', 'drew', 'dudley', 'dustin', 'ed', 'dylan', 'elliot', 'zeke' ];
+        var WHITENAMES    = [[ 'james', 'john', 'robert', 'michael', 'david', 'richard', 'daniel', 'paul', 'mark', 'donald', 'george', 'steve', 'jeff', 'larry', 'josh', 'dennis', 'carl', 'harold', 'doug', 'joe', 'justin', 'harry', 'bruce', 'aaron', 'jesse', 'craig', 'leonard', 'stanley', 'nate', 'alex', 'leo', 'tim', 'zack', 'brad', 'neil', 'jim', 'bob', 'bobby', 'xander', 'ethan', 'adam', 'baxter', 'caleb', 'matt', 'robert', 'robin', 'gabriel', 'gabe', 'ray', 'raymond', 'phil', 'toby', 'bart', 'arlo', 'abel', 'ace', 'adir', 'aidan', 'aiden', 'al', 'alvin', 'andre', 'ansel', 'anthony', 'tony', 'antoine', 'aric', 'arnie', 'arnold', 'arthur', 'austin', 'barney', 'barry', 'benjamin', 'ben', 'brandon', 'brent', 'chad', 'bryan', 'buster', 'calvin', 'casey', 'cecil', 'cedric', 'chase', 'chandler', 'charlie', 'chip', 'chris', 'christopher', 'claude', 'cletus', 'cliff', 'cody', 'cyril', 'cyrus', 'damion', 'dan', 'darcy', 'darian', 'darren', 'daryl', 'dean', 'shawn', 'dominic', 'douggie', 'drew', 'dudley', 'dustin', 'ed', 'dylan', 'elliot', 'zeke' ], ['ashley', 'emma', 'emily', 'emma', 'madison', 'olivia', 'isabella', 'samantha', 'hannah', 'liz', 'alexis', 'sarah', 'lily', 'jen', 'kaylee', 'alison', 'zoe', 'paige', 'andrea', 'leah', 'claire', 'molly', 'amy', 'natalie', 'elise', 'lindsay', 'monica']];
         var WHITESURNAMES = ['smith', 'john', 'william', 'jone', 'brown', 'miller', 'will', 'moore', 'tayor', 'ander', 'jack', 'white', 'harris', 'martin', 'thomp', 'robin', 'clark', 'lewis', 'lee', 'walker', 'hall', 'allen', 'young', 'king', 'wright', 'hill', 'scott', 'green', 'edward', 'turner', 'parker', 'stewart', 'roger', 'perez', 'carter', 'baker', 'adam', 'morris', 'roger', 'gray', 'jenkin', 'cole', 'aker', 'albert', 'apple', 'arring', 'arthur', 'atkin', 'atwood', 'bank', 'barker', 'bate', 'beck', 'becket', 'bell', 'bennet', 'blake', 'bonner', 'booth', 'bourne', 'bran', 'brant', 'bryant', 'brown' ];
-        var HISPANICNAMES = [ 'jose', 'juan', 'francisco', 'jesus', 'antonio', 'alejandro', 'miguel', 'pedro', 'manuel', 'ricardo', 'fernando', 'carlos', 'rafael', 'elias', 'raul', 'diego', 'pablo' ];
+        var HISPANICNAMES = [[ 'jose', 'juan', 'francisco', 'jesus', 'antonio', 'alejandro', 'miguel', 'pedro', 'manuel', 'ricardo', 'fernando', 'carlos', 'rafael', 'elias', 'raul', 'diego', 'pablo' ], [ 'Addys', 'Adriana', 'Agustina', 'Aldea', 'Alejandra', 'Alma', 'Amalia', 'Amparo', 'Ana', 'Anabel', 'Andrea', 'Andreina', 'Anita', 'Antonia', 'Araceli', 'Aurora', 'Bianca', 'Blanca', 'Blanche', 'Bonita', 'Carlota', 'Carmelita', 'Carolina', 'Catalina', 'Claudia', 'Concepción', 'Conchita', 'Consuelo', 'Cristina', 'Cynthia', 'Delia', 'Diana', 'Dolores', 'Elena', 'Eliana', 'Elisa', 'Elvira', 'Emily', 'Erika', 'Ester', 'Eva', 'Fatima', 'Fernanda', 'Flavia', 'Flora', 'Gabriela', 'Guiomar', 'Helena', 'Hilda', 'Ileana', 'Ilona', 'Imelda', 'Ines', 'Inez', 'Isa', 'Isabel', 'Isabella', 'Ivonne', 'Jacin', 'Jacinta', 'Jacqueline', 'Joaquina', 'Josefina', 'Juana', 'Julia', 'Justina', 'Karina', 'Lana', 'Lara', 'Laura', 'Lena', 'Lolita', 'Luisa', 'Lupe', 'Lupita', 'Macarena', 'Magdalena', 'Manuela', 'Marcela', 'Margarita', 'Maria', 'María de Lourdes', 'María José', 'Mariela', 'Marina', 'Marisa', 'Marisol', 'Marta', 'Maura', 'Maya', 'Melania', 'Melina', 'Mercedes', 'Meritxell', 'Millaray', 'Morena', 'Nadia', 'Natalia', 'Nina', 'Noelia', 'Núria', 'Olga', 'Paulina', 'Pilar', 'Rachel', 'Ramona', 'Raquel', 'Rita', 'Rocío', 'Rosa', 'Salma', 'Sandra', 'Simone', 'Soledad', 'Sonia', 'Sophia', 'Soraya', 'Tamara', 'Tara', 'Tatiana', 'Tina', 'Tomasa', 'Urraca', 'Valentina', 'Valeria', 'Victoria', 'Vilma', 'Viola', 'Virginia', 'Viridiana', 'Xiomara', 'Zulema' ]];
         var HISPANICSURNAMES = ['santos', 'garcia', 'lopez', 'rodriguez', 'hernandez', 'martinez', 'gonzalez', 'perez', 'sanchez', 'ramirez', 'flores', 'torres', 'rivera', 'diaz', 'cruz', 'alvarez', 'castillo', 'romero', 'vega' ];
         var COLOMBIANSURNAMES = [ 'Rodríguez', 'Gómez', 'González', 'Martínez', 'García', 'López', 'Hernández', 'Sánchez', 'Ramírez', 'Pérez', 'Días', 'Muñoz', 'Rojas', 'Moreno', 'Jiménez', 'Escobar' ];
-        var DESINAMES     = [ 'abhay', 'abhinav', 'abhishek ', 'adarsh', 'adesh', 'adhar', 'ajay ', 'ajish', 'ajit ', 'akhil', 'ambika ', 'amit', 'ammar ', 'ananya', 'anil ', 'anirban', 'aniruddha ', 'ankit', 'anuj ', 'anup', 'anupam ', 'anurag', 'apoorva ', 'arjun ', 'arnab', 'arun ', 'arvind', 'arya ', 'aseem', 'ashoka ', 'ashwin ', 'bali ', 'baltej', 'bharat', 'bhavesh', 'bhupinder', 'bhushan', 'bibin', 'biju', 'binu', 'byramjee', 'chandrajit', 'dayanidhi', 'deepak', 'devendra', 'devesh', 'dinesh', 'dipankar', 'ekram', 'ganesh ', 'ganpatrao', 'girish', 'girjesh', 'gopinathan', 'govindrao', 'gurcharan', 'gurunath', 'hansraj', 'hara ', 'harish', 'harjit', 'harsh', 'hitesh', 'ira ', 'ishana', 'jagannath ', 'jaipal', 'jalaj', 'jayant ', 'jitendra ', 'kalimuthu', 'karthik', 'karthikeyan', 'kaushal', 'kazi ', 'kishor ', 'kripesh', 'krishnappa', 'krishnayya', 'kulbhushan', 'kumar ', 'lakshan', 'lakshman ', 'mahboob', 'mahendra', 'mandar ', 'manmohan', 'mayank', 'milan ', 'mukesh', 'munish', 'nadeem', 'nagaraj', 'nagesh ', 'nana ', 'naranbhai', 'narayan ', 'naveen', 'neeraj', 'nibaran', 'nihal ', 'nihar', 'nilesh', 'nirav', 'nitesh', 'nitin', 'nripendra', 'oommen', 'palanivel', 'pallav', 'pankaj', 'phani', 'prakash', 'pramod', 'pranab', 'prataprao', 'pratul', 'radhanath', 'rahul', 'raj', 'raja ', 'rajendra ', 'rajinder', 'rajiv', 'rakesh', 'ram ', 'ramakant', 'ramesh', 'ranbir', 'randhir', 'ranganath', 'ratul', 'ravi', 'ravinder', 'ravish', 'rinjish', 'ritwik', 'rohit', 'roman ', 'sachin ', 'sahil ', 'saket', 'samar ', 'samir', 'sandipan', 'sarabjit', 'saravanan', 'satyadev', 'satyajit', 'sekar', 'shahbaz', 'shailendra', 'sharad', 'shekhar', 'shishir', 'shishira', 'shridhar', 'shubhendu', 'sitaramayya', 'smeet ', 'somesh', 'soumitra', 'sourav', 'srikanta', 'srinivas', 'subrata', 'sudhir', 'sudhir Kumar', 'sukhbir', 'sundar', 'sunil', 'surendranath', 'suresh', 'sureza', 'surinder', 'tarsem', 'tarun', 'udit', 'umesh', 'upendra', 'vallathol', 'varghese', 'vasudevan', 'venkataraman', 'venu ', 'vidyut ', 'vikas', 'vinay', 'vinod', 'virat', 'vishva ', 'wasim', 'yash', 'yogesh' ];
+        var DESINAMES     = [[ 'abhay', 'abhinav', 'abhishek ', 'adarsh', 'adesh', 'adhar', 'ajay ', 'ajish', 'ajit ', 'akhil', 'ambika ', 'amit', 'ammar ', 'ananya', 'anil ', 'anirban', 'aniruddha ', 'ankit', 'anuj ', 'anup', 'anupam ', 'anurag', 'apoorva ', 'arjun ', 'arnab', 'arun ', 'arvind', 'arya ', 'aseem', 'ashoka ', 'ashwin ', 'bali ', 'baltej', 'bharat', 'bhavesh', 'bhupinder', 'bhushan', 'bibin', 'biju', 'binu', 'byramjee', 'chandrajit', 'dayanidhi', 'deepak', 'devendra', 'devesh', 'dinesh', 'dipankar', 'ekram', 'ganesh ', 'ganpatrao', 'girish', 'girjesh', 'gopinathan', 'govindrao', 'gurcharan', 'gurunath', 'hansraj', 'hara ', 'harish', 'harjit', 'harsh', 'hitesh', 'ira ', 'ishana', 'jagannath ', 'jaipal', 'jalaj', 'jayant ', 'jitendra ', 'kalimuthu', 'karthik', 'karthikeyan', 'kaushal', 'kazi ', 'kishor ', 'kripesh', 'krishnappa', 'krishnayya', 'kulbhushan', 'kumar ', 'lakshan', 'lakshman ', 'mahboob', 'mahendra', 'mandar ', 'manmohan', 'mayank', 'milan ', 'mukesh', 'munish', 'nadeem', 'nagaraj', 'nagesh ', 'nana ', 'naranbhai', 'narayan ', 'naveen', 'neeraj', 'nibaran', 'nihal ', 'nihar', 'nilesh', 'nirav', 'nitesh', 'nitin', 'nripendra', 'oommen', 'palanivel', 'pallav', 'pankaj', 'phani', 'prakash', 'pramod', 'pranab', 'prataprao', 'pratul', 'radhanath', 'rahul', 'raj', 'raja ', 'rajendra ', 'rajinder', 'rajiv', 'rakesh', 'ram ', 'ramakant', 'ramesh', 'ranbir', 'randhir', 'ranganath', 'ratul', 'ravi', 'ravinder', 'ravish', 'rinjish', 'ritwik', 'rohit', 'roman ', 'sachin ', 'sahil ', 'saket', 'samar ', 'samir', 'sandipan', 'sarabjit', 'saravanan', 'satyadev', 'satyajit', 'sekar', 'shahbaz', 'shailendra', 'sharad', 'shekhar', 'shishir', 'shishira', 'shridhar', 'shubhendu', 'sitaramayya', 'smeet ', 'somesh', 'soumitra', 'sourav', 'srikanta', 'srinivas', 'subrata', 'sudhir', 'sudhir Kumar', 'sukhbir', 'sundar', 'sunil', 'surendranath', 'suresh', 'sureza', 'surinder', 'tarsem', 'tarun', 'udit', 'umesh', 'upendra', 'vallathol', 'varghese', 'vasudevan', 'venkataraman', 'venu ', 'vidyut ', 'vikas', 'vinay', 'vinod', 'virat', 'vishva ', 'wasim', 'yash', 'yogesh' ], [ 'Aishwarya', 'Akhila', 'Ambika', 'Ami', 'Amita', 'Amrita', 'Ananya', 'Anjali', 'Ankita', 'Anu', 'Anupama', 'Anushree', 'Apoorva', 'Arpita', 'Arti', 'Arundhati', 'Bipasha', 'Damayanti', 'Deepa', 'Deepali', 'Deepika', 'Deepti', 'Devanshi', 'Dhanishka', 'Eva', 'Gayatri', 'Gita', 'Gitanjali', 'Harshita', 'Heera', 'Hemalata', 'Indira', 'Indrani', 'Indumati', 'Jacqueline', 'Jara', 'Jesminder', 'Juhi', 'Kanika', 'Karthika', 'Karthika', 'Kavita', 'Kirtan', 'Kumudini', 'Lakshanya', 'Lata', 'Latha', 'Latika', 'Lauretta', 'Leela', 'Leelavathi', 'Leila', 'Lena', 'Madhuri', 'Mallika', 'Manjula', 'Manorama', 'Maya', 'Mira', 'Nahla', 'Naila', 'Neha', 'Nehal', 'Niharika', 'Nikita', 'Padmavati', 'Pallavi', 'Parvati', 'Phanita', 'Poonam', 'Poulomi', 'Pratibha', 'Preeti', 'Priya', 'Priyanka', 'Puja', 'Ragini', 'Ramya', 'Rana', 'Rani', 'Rashmi', 'Rati', 'Rekha', 'Richa', 'Ritwika', 'Roopa', 'Saloni', 'Sanah', 'Sandhya', 'Sania', 'Saraswati Devi', 'Satyana', 'Savitri', 'Sharmila', 'Sheela', 'Sheetal', 'Shilpa', 'Shreya', 'Shweta', 'Sneha', 'Sudha', 'Sujata', 'Sulochana', 'Sushma', 'Susmita', 'Swetha', 'Tala', 'Tanisha', 'Tanushree', 'Tejal', 'Tina', 'Uma', 'Varsha', 'Vibha', 'Vijayalakshmi', 'Yamini' ]];
         var DESISURNAMES  = [ 'Sharma', 'Verma', 'Gupta', 'Malhotra', 'Bhatnagar', 'Saxena', 'Kapoor, Kapur', 'Singh', 'Mehra', 'Chopra', 'Sarin', 'Malik', 'Chatterjee', 'Sen', 'Bose', 'Sengupta', 'Das', 'Dasgupta', 'Banerjee', 'Chattopadhyay', 'Mukopadhyay', 'Dutta', 'Nair', 'Pillai', 'Rao', 'Jayaraman', 'Venkatesan', 'Balasubramanium', 'Subramanium', 'Rangan', 'Rangarajan', 'Singh', 'Yadav', 'Jhadav', 'Jaiteley', 'Chauhan', 'Mistry', 'Khan', 'Shah', 'Mehta', 'Patel', 'Patil', 'Pawar', 'Gavde', 'Kadam', 'Tambe', 'Chavan' ];
+        var ARABNAMES = [['abbas', 'abdul', 'abid', 'amir', 'arif', 'aziz', 'bakr', 'bashir', 'falah', 'faisal', 'habib', 'ibrahim', 'ismail', 'ilias', 'kazim', 'muhammad', 'mustafa', 'nadir', 'nasir', 'sahir', 'talib', 'nasim', 'yasir'], [ 'Abeer', 'Abiha', 'Adela', 'Afaf', 'Aisha', 'Aliya', 'Alya', 'Amalia', 'Amina', 'Amira', 'Arwa', 'Ashraqat', 'Asma', 'Atikah', 'Aya', 'Azhar', 'Azra', 'Boutheina', 'Bushra', 'Chaima', 'Cynthia', 'Dalal', 'Dalia', 'Danielle', 'Dina', 'Eliana', 'Esma', 'Eva', 'Farah', 'Farida', 'Fatima', 'Feyrouz', 'Habiba', 'Hafsa', 'Hajra', 'Hala', 'Halima', 'Hamida', 'Hana', 'Hanifa', 'Havva', 'Hawa', 'Hayat', 'Hessa', 'Huda', 'Ibtisam', 'Inaam', 'Jamila', 'Jana', 'Jawahir', 'Jena', 'Jennifer', 'Jessica', 'Joelle', 'Julia', 'Jumana', 'Kareena', 'Karima', 'Katya', 'Khadija', 'Khairunnisa', 'Khawlah', 'Lama', 'Lamia', 'Lana', 'Lara', 'Latifa', 'Layan', 'Leila', 'Lina', 'Lulwa', 'Madiha', 'Maha', 'Mahmuna', 'Mai', 'Malika', 'Maria', 'Marwa', 'Maryam', 'Maya', 'Maya Ali', 'Maysoon', 'Melek', 'Melissa', 'Mila', 'Mira', 'Mirna', 'Mona', 'Munira', 'Nadia', 'Nadine', 'Nafisa', 'Nahla', 'Naila', 'Naima', 'Najat', 'Nalini', 'Nasim', 'Nasrin', 'Natasha', 'Nathalie', 'Nawal', 'Nayla', 'Naziha', 'Nehal', 'Nejla', 'Nermin', 'Nezha', 'Nina', 'Qistina', 'Rabia', 'Rahima', 'Rana', 'Rania', 'Rashida', 'Reem', 'Riffat', 'Rimas', 'Rita', 'Ruqayya', 'Saadia', 'Sabiha', 'Safiya', 'Sahar', 'Saida', 'Saira', 'Sajida', 'Sakhra', 'Sakina', 'Salma', 'Samar', 'Samira', 'Samiya', 'Sandra', 'Sania', 'Sarah', 'Selma', 'Shahd', 'Shakira', 'Shams', 'Shatha', 'Sherine', 'Shumaila', 'Suha', 'Sumaya', 'Tahira', 'Tala', 'Tamara', 'Tanisha', 'Tanya', 'Tara', 'Taslima', 'Tina', 'Tuba', 'Umm Kulthum', 'Wafaa', 'Yamina', 'Yara', 'Yasmin', 'Zahra', 'Zakiya', 'Zaynab', 'Zuhal' ]];
+        var BLACKNAMES = ['DeShawn', 'DeAndre', 'marquis', 'darnell', 'terrell', 'malik', 'trevon', 'tyrone', 'willie', 'dominique', 'demetrius', 'reginald', 'jamal', 'maurice', 'jalen', 'darius', 'xavier', 'terrance', 'andre', 'darryl', 'curtis', 'zeke', 'zack']
+        var GERMANNAMES = [['jan', 'jannik', 'stefan', 'jorg', 'klaus', 'peter', 'günter', 'hans', 'wolfgang', 'heinz', 'herbert', 'karl', 'ernst', 'friedrich', 'wilhelm', 'otto'], [ 'Adele', 'Adelgunde', 'Adelheid', 'Adolfine', 'Agatha', 'Agnes', 'Aische', 'Alexandra', 'Alice', 'Alina', 'Aline', 'Alma', 'Alwina', 'Alwine', 'Amalia', 'Amalie', 'Amanda', 'Amelie', 'Andrea', 'Angela', 'Angelika', 'Angelina', 'Anika', 'Anita', 'Anja', 'Anke', 'Ann-Katrin', 'Anna', 'Anne', 'Annegret', 'Anneli', 'Annelie', 'Anneliese', 'Annemarie', 'Annette', 'Anni', 'Annika', 'Annina', 'Anny', 'Antje', 'Antonia', 'Astrid', 'Augusta', 'Auguste', 'Barbara', 'Bärbel', 'Beate', 'Beatrice', 'Beatrix', 'Bernadette', 'Berta', 'Bertha', 'Bettina', 'Bianca', 'Bianka', 'Birgit', 'Brigitte', 'Britta', 'Brunhild', 'Brünhild', 'Brunhilde', 'Brünhilde', 'Cäcilia', 'Cäcilie', 'Caren', 'Carina', 'Carla', 'Carmen', 'Carola', 'Carolin', 'Caroline', 'Catarina', 'Catharina', 'Cathrin', 'Catrin', 'Cecilia', 'Cecilie', 'Celina', 'Celine', 'Charlotte', 'Chiara', 'Christa', 'Christel', 'Christiane', 'Christina', 'Christine', 'Clara', 'Claudia', 'Constanze', 'Cordula', 'Corina', 'Corinna', 'Cornelia', 'Dagmar', 'Daniela', 'Denise', 'Desirée', 'Désirée', 'Diana', 'Dietlind', 'Dietlinde', 'Dora', 'Doris', 'Dorothea', 'Edda', 'Edith', 'Eike', 'Elena', 'Eleonora', 'Eleonore', 'Elfriede', 'Elisa', 'Elisabeth', 'Elise', 'Elke', 'Ella', 'Ellen', 'Elli', 'Elly', 'Elma', 'Elsa', 'Elsbeth', 'Else', 'Elvira', 'Emelie', 'Emely', 'Emilia', 'Emilie', 'Emily', 'Emma', 'Emmeline', 'Emmi', 'Emmy', 'Erdmute', 'Erica', 'Erika', 'Erna', 'Ester', 'Esther', 'Eugenie', 'Eva', 'Evelyn', 'Fabienne', 'Fanny', 'Felicia', 'Felicitas', 'Felizia', 'Felizitas', 'Finja', 'Finnja', 'Fiona', 'Flora', 'Florentina', 'Florentine', 'Franziska', 'Frauke', 'Freya', 'Frida', 'Fridegunde', 'Frieda', 'Friedegund', 'Friedegunde', 'Friederike', 'Fujiko', 'Gabriela', 'Gabriele', 'Genoveva', 'Gerda', 'Gerlind', 'Gerlinde', 'Gertraud', 'Gertrud', 'Gertrudis', 'Gesine', 'Gina', 'Gisela', 'Grete', 'Gretel', 'Grethe', 'Gudrun', 'Gunda', 'Gundula', 'Hanna', 'Hannah', 'Hanne', 'Hannelore', 'Hedwig', 'Heide', 'Heidemarie', 'Heidi', 'Heike', 'Helena', 'Helene', 'Helga', 'Helge', 'Hella', 'Helmina', 'Helmine', 'Henny', 'Hermina', 'Hermine', 'Herta', 'Hertha', 'Hilda', 'Hilde', 'Hildegard', 'Hulda', 'Ida', 'Ilse', 'Ines', 'Inga', 'Inge', 'Ingeborg', 'Ingeburg', 'Ingrid', 'Irene', 'Irina', 'Iris', 'Irma', 'Irmela', 'Irmelin', 'Irmgard', 'Isabel', 'Isabell', 'Isabella', 'Isabelle', 'Isolde', 'Ivonne', 'Jacqueline', 'Jana', 'Janina', 'Janine', 'Jaqueline', 'Jasmin', 'Jennifer', 'Jessica', 'Johanna', 'Johanne', 'Josefine', 'Josephine', 'Judith', 'Jule', 'Julia', 'Juliane', 'Jutta', 'Kai', 'Karen', 'Karin', 'Karina', 'Karla', 'Karolin', 'Karoline', 'Katarina', 'Käte', 'Katharina', 'Käthe', 'Kathrin', 'Katja', 'Katrin', 'Kerstin', 'Kim', 'Kimiko', 'Kirsten', 'Klara', 'Konstanze', 'Kristin', 'Kristina', 'Kunigunde', 'Lara', 'Larissa', 'Laura', 'Lea', 'Lena', 'Leni', 'Leoni', 'Leonie', 'Leonore', 'Liane', 'Liese', 'Liesel', 'Lieselotte', 'Liesl', 'Lili', 'Lilli', 'Lilly', 'Lina', 'Linda', 'Lisa', 'Liselotte', 'Livia', 'Lore', 'Lotte', 'Louisa', 'Louise', 'Lucia', 'Lucie', 'Luisa', 'Luise', 'Lulu', 'Luna', 'Luzia', 'Luzie', 'Lydia', 'Madeleine', 'Madleen', 'Madlen', 'Madlene', 'Magda', 'Magdalena', 'Magdalene', 'Maike', 'Maja', 'Manuela', 'Mareike', 'Maren', 'Marga', 'Margareta', 'Margarete', 'Margaretha', 'Margarethe', 'Margit', 'Margot', 'Margret', 'Margrit', 'Maria', 'Marianne', 'Marie', 'Marie-Theres', 'Marie-Therese', 'Marina', 'Marion', 'Marleen', 'Marlen', 'Marlene', 'Marlies', 'Marlis', 'Marta', 'Martha', 'Martina', 'Mathilde', 'Maya', 'Mechthild', 'Meike', 'Melanie', 'Melina', 'Melissa', 'Merle', 'Meta', 'Mia', 'Micha', 'Michaela', 'Michelle', 'Minna', 'Miriam', 'Mirjam', 'Mitsuko', 'Mona', 'Monica', 'Monika', 'Nadia', 'Nadin', 'Nadine', 'Nadja', 'Natali', 'Natalie', 'Natascha', 'Nathalie', 'Neele', 'Nele', 'Nicola', 'Nicole', 'Nina', 'Noemi', 'Nora', 'Oda', 'Olga', 'Olivia', 'Ottilie', 'Patricia', 'Patrizia', 'Paula', 'Paulina', 'Pauline', 'Petra', 'Pia', 'Rachel', 'Rafaela', 'Raffaela', 'Rahel', 'Ramona', 'Raphaela', 'Rebecca', 'Rebekka', 'Regina', 'Renate', 'Resi', 'Ricarda', 'Rita', 'Rolanda', 'Ronja', 'Rosa', 'Rose', 'Rosemarie', 'Roswitha', 'Ruth', 'Sabina', 'Sabine', 'Sabrina', 'Samantha', 'Sandra', 'Sara', 'Sarah', 'Saskia', 'Scheherazade', 'Selina', 'Seraphina', 'Seraphine', 'Sibylle', 'Sieglind', 'Sieglinde', 'Siglind', 'Siglinde', 'Sigrid', 'Silke', 'Silvia', 'Simone', 'Sina', 'Sissi', 'Sofia', 'Sofie', 'Sonja', 'Sophia', 'Sophie', 'Stefanie', 'Stella', 'Stephanie', 'Susanna', 'Susanne', 'Svenja', 'Swenja', 'Sybille', 'Sylvia', 'Tabea', 'Tamara', 'Tanja', 'Tatjana', 'Teresa', 'Thekla', 'Theres', 'Theresa', 'Therese', 'Theresia', 'Thirza', 'Tina', 'Tirza', 'Traute', 'Trude', 'Ulrike', 'Ursel', 'Ursula', 'Uta', 'Ute', 'Valentina', 'Valerie', 'Vanessa', 'Vera', 'Verena', 'Verona', 'Veronika', 'Victoria', 'Viktoria', 'Walburg', 'Walburga', 'Waldtraud', 'Waldtraut', 'Walpurga', 'Walpurgis', 'Waltraud', 'Waltraut', 'Wanja', 'Wibke', 'Wiebke', 'Wilhelmina', 'Wilhelmine', 'Wilma', 'Xenia', 'Yasmin', 'Yvonne', 'Zäzilia', 'Zäzilie', 'Zoe' ]];
+        var KOREANNAMES = ['jun', 'jung-hoon', 'sung-ho', 'joon-ho', 'sang-hoon' ];
 
         var name;
         var tagline;
@@ -110,7 +114,6 @@
         for (var i = 0; i < 10; i++) {
           //tulpas.push(makeTulpa(Math.random() * 10, Math.random() * 10));
         }
-        console.log(tulpas);
 
         // todo
         function randomMeme () {
@@ -230,7 +233,7 @@
           var form = pickRandom(pickRandom(forms));
 
           console.log("");
-          console.log("spawning the " + religion + " " + nationality);
+          console.log("spawning the " + religion + " " + nationality + " " + gender);
           console.log(form);
 
           // why do you do this bad thing?
@@ -304,6 +307,7 @@
           if (gender === 'female') {
             form = form.replace(' his ', ' her '); //todo: all instances
             form = form.replace(' he ', ' she '); //todo: all instances
+            form = form.replace('filipino', 'filipina');
           }
 
           return form;
@@ -315,6 +319,13 @@
 
         function pickRandom(ar) {
           return ar[Math.floor(Math.random() * ar.length)];
+        }
+
+        function pickRandomName(ar,gender) {
+          if (gender === 'male')
+            return ar[0][Math.floor(Math.random() * ar[0].length)];
+          else
+            return ar[1][Math.floor(Math.random() * ar[1].length)];
         }
 
         function randomBetween (min, max) {
@@ -341,6 +352,19 @@
         function randomName (nationality, gender) {
           var name = randomChars(2, 3);
           var surname = randomChars(2, 4);
+
+          if (gender === 'female')
+            name = feminizeName(name);
+
+          function feminizeName (name) {
+            if (Math.random() > .5)
+              name = name + "ina";
+            else if (Math.random() > .3)
+              name = name + "ette";
+            else
+              name = name + "na";
+            return name;
+          }
 
           function russifyName (name) {
             name = name.replace("w","v"); //todo replaceall
@@ -406,7 +430,7 @@
             surname = randomChars(2,2);
             surname = russifySurname(surname);
             if (Math.random() > .1) {
-              name = pickRandom(RUSNAMES);
+              name = pickRandomName(RUSNAMES, gender);
             } else {
               name = randomChars(2,2);
               name = russifyName(name);
@@ -429,7 +453,8 @@
             surname = surname.replace(/ch/g, 'tz');
             surname = surname.replace(/kh/g, 'h');
           } else if (nationality === 'black' || nationality === 'african american') {
-            name = pickRandom(['DeShawn', 'DeAndre', 'marquis', 'darnell', 'terrell', 'malik', 'trevon', 'tyrone', 'willie', 'dominique', 'demetrius', 'reginald', 'jamal', 'maurice', 'jalen', 'darius', 'xavier', 'terrance', 'andre', 'darryl', 'curtis', 'zeke', 'zack']);
+            if (gender === 'male')
+              name = pickRandom(BLACKNAMES);
             surname = pickRandom(['williams', 'johnson', 'smith', 'jones', 'brown', 'jackson', 'davis', 'thomas', 'harris', 'robinson', 'taylor', 'wilson', 'moore', 'white', 'lewis', 'walker', 'green', 'washington', 'thompson', 'anderson', 'scott', 'carter', 'miller', 'king', 'coleman', 'james', 'franklin', 'tucker', 'berry', 'little']);
           } else if (nationality === 'european') {
             if (Math.random() > 0.7) {
@@ -443,13 +468,10 @@
               surname = nordifyName(surname);
             }
           } else if (nationality === 'jew' || nationality === 'israeli') {
-            if (gender === 'male')
-              name = pickRandom(JEWNAMES);
-            else
-              name = pickRandom(['avital', 'carmel', 'deborah', 'efrat', 'ilana', 'maya', 'naama', 'rache', 'sarah', 'tal']);
+            name = pickRandomName(JEWNAMES, gender);
 
             if (Math.random() > 0.7) 
-              surname = pickRandom(JEWNAMES);
+              surname = pickRandom(JEWNAMES[0]);
             else (Math.random() > .5)
               surname = pickRandom([ 'stone', 'blum', 'bloom', 'alter', 'bern', 'blatt', 'apfel', 'zucker', randomChars(2,2) ]) + pickRandom([ 'stein', 'stain', 'berg', 'man', 'field', 'baum' ]);
 
@@ -457,23 +479,23 @@
               surname = russifySurname(randomChars(2,2));
 
           } else if (nationality === 'german' || nationality === 'bavarian') {
-            name = pickRandom(['jan', 'jannik', 'stefan', 'jorg', 'klaus', 'peter', 'günter', 'hans', 'wolfgang', 'heinz', 'herbert', 'karl', 'ernst', 'friedrich', 'wilhelm', 'otto']);
+            name = pickRandomName(GERMANNAMES, gender);
             surname = pickRandom(['muller', 'schmidt', 'schneider', 'fischer', 'weber', 'meyer', 'wagner', 'becker', 'schulz', 'hoffman', 'schafer', 'koch', 'bauer', 'richter', 'klein', 'wolf', 'schoder', 'neumann', 'schwartz', 'zimmerman', 'braun', 'kruger', 'lange', 'schmitt', 'krause', 'lehmann', 'stirner']);
           } else if (nationality === 'greek' || nationality === 'macedonian') {
-            name = pickRandom(GREEKNAMES);
+            name = pickRandomName(GREEKNAMES, gender);
             surname = pickRandom(GREEKSURNAMES);
           } else if (nationality === 'turk') {
             name = turkifyName(name);
             surname = turkifyName(surname);
           } else if (nationality === 'viet') {
-            name = pickRandom(WHITENAMES);
+            name = pickRandomName(WHITENAMES, gender);
             surname = pickRandom(VIETSURNAMES);
           } else if (nationality === 'desi') {
-            name = pickRandom(DESINAMES);
+            name = pickRandomName(DESINAMES, gender);
             surname = pickRandom(DESISURNAMES);
           } else if (nationality === 'swede') {
-            name = pickRandom(SWEDENAMES);
-            name = pickRandom(['ander', 'johan', 'karl', 'nils', 'erik', 'lars', 'sven', 'gustav', 'gustafs', 'peters', 'jons', 'jans', 'bengts', 'jöns', 'jakobs', 'olofs', 'ek', 'gunnars', 'samuel', 'holm', 'isaks', 'arvids', 'söder', 'björk', 'berg', 'sjö', 'sund', 'ny', 'vik', 'holm' ]);
+            name = pickRandomName(SWEDENAMES, gender);
+            surname = pickRandom(['ander', 'johan', 'karl', 'nils', 'erik', 'lars', 'sven', 'gustav', 'gustafs', 'peters', 'jons', 'jans', 'bengts', 'jöns', 'jakobs', 'olofs', 'ek', 'gunnars', 'samuel', 'holm', 'isaks', 'arvids', 'söder', 'björk', 'berg', 'sjö', 'sund', 'ny', 'vik', 'holm' ]);
             if (Math.random() > .8)
               surname += 'son';
             else if (Math.random() > .8)
@@ -488,28 +510,27 @@
             name = nordifyName(name);
             surname = nordifyName(surname);
           } else if (nationality === 'algerian' || nationality === 'arab' || nationality === 'palestinian' || nationality === 'saudi' || nationality === 'egyptian' || nationality === 'bedouin') {
-            name = pickRandom(['abbas', 'abdul', 'abid', 'amir', 'arif', 'aziz', 'bakr', 'bashir', 'falah', 'faisal', 'habib', 'ibrahim', 'ismail', 'ilias', 'kazim', 'muhammad', 'mustafa', 'nadir', 'nasir', 'sahir', 'talib', 'nasim', 'yasir']);
+            name = pickRandomName(ARABNAMES, gender);
             surname = pickRandom(['abbas', 'abdul', 'ahmad', 'Al-Mubarak', 'Al-Bariqi', 'alavi', 'ali', 'amri', 'Al-Asiri', 'ata', 'awad', 'ayad', 'badawi', 'ghali', 'gaddafi', 'Al Hamdan', 'hamid', 'hussein']);
           } else if (nationality === 'korean' ) {
-            name = pickRandom(['jun', 'jung-hoon', 'sung-ho', 'joon-ho', 'sang-hoon' ]);
+            if (gender === 'male')
+              name = pickRandom(KOREANNAMES);
+            else
+              name = pickRandomName(WHITENAMES);
             surname = pickRandom(['kim', 'pak', 'yi', 'ri', 'chong', 'cho', 'kang', 'chang', 'yung', 'han', 'so', 'song', 'chu', 'kwak', 'ki']);
           } else if (nationality === 'filipino') {
             surname = pickRandom(HISPANICSURNAMES);
           } else if (nationality === 'mexican' || nationality === 'spaniard') {
-            name = pickRandom(HISPANICNAMES);
+            name = pickRandomName(HISPANICNAMES,gender);
             surname = pickRandom(HISPANICSURNAMES);
             var surname2 = capitalize(pickRandom(['garcia', 'lopez', 'rodriguez', 'hernandez', 'martinez', 'gonzalez', 'perez', 'sanchez', 'ramirez', 'flores', 'torres', 'rivera', 'diaz', 'cruz', 'alvarez', 'castillo', 'romero', 'vega' ]));
             if (Math.random() > 0.5 && capitalize(surname) !== surname2)
               surname = surname + '-' + surname2;
           } else if (nationality === 'colombian') {
-            name = pickRandom(HISPANICNAMES);
+            name = pickRandomName(HISPANICNAMES, gender);
             surname = pickRandom(COLOMBIANSURNAMES);
           } else if (nationality === 'american' || nationality === 'brit' || nationality === 'canadian' || nationality === 'australian' || nationality === 'goy') {
-            if (gender === 'male')
-              name = pickRandom(WHITENAMES);
-            else
-              name = pickRandom(['ashley', 'emma', 'emily', 'emma', 'madison', 'olivia', 'isabella', 'samantha', 'hannah', 'liz', 'alexis', 'sarah', 'lily', 'jen', 'kaylee', 'alison', 'zoe', 'paige', 'andrea', 'leah', 'claire', 'molly', 'amy', 'natalie', 'elise', 'lindsay', 'monica']);
-
+            name = pickRandomName(WHITENAMES, gender);
             surname = pickRandom(WHITESURNAMES);
 
             if (Math.random() > .8)
@@ -535,18 +556,20 @@
 
         var images = new Map();
 
-        //images.set('bg',   new Array(35));
-        images.set('base',   new Array(7));
-        images.set('nose',   new Array(10));
-        images.set('mouth',  new Array(9));
-        images.set('detail', new Array(4));
-        images.set('eyes',   new Array(5));
-        images.set('mouth',  new Array(9));
-        images.set('brows',  new Array(6));
-        images.set('shirt',  new Array(8));
-        images.set('hair',   new Array(30));
-        images.set('beard',  new Array(12));
-        images.set('stache', new Array(6));
+        images.set('base',       new Array(7));
+        images.set('girlbase',   new Array(7));
+        images.set('nose',       new Array(10));
+        images.set('mouth',      new Array(9));
+        images.set('girlmouth',  new Array(9));
+        images.set('detail',     new Array(4));
+        images.set('girldetail', new Array(1));
+        images.set('eyes',       new Array(5));
+        images.set('girleyes',   new Array(2));
+        images.set('brows',      new Array(6));
+        images.set('shirt',      new Array(8));
+        images.set('hair',       new Array(30));
+        images.set('beard',      new Array(12));
+        images.set('stache',     new Array(6));
 
         var imagesToLoad = 0;
         
@@ -556,9 +579,10 @@
 
         images.forEach(function(value, key) {
           var ar = value;
+          var path = key.indexOf('girl') == -1 ? 'img/' : 'img/girl/';
           for (var i = 0; i < ar.length; i++) {
             ar[i] = new Image();
-            ar[i].src = 'img/' + key + (i+1) + '.png';
+            ar[i].src = path + key.replace('girl','') + (i+1) + '.png';
             ar[i].onload = function() {
               imagesToLoad--;
               if (imagesToLoad == 0) 
@@ -571,11 +595,9 @@
 
           document.getElementById("canvas").style.background = pickRandom([ "#8cbfff", "#b9ffb9", "#8a8383", "#719064", "#8f6490", "#f5b0f7", "#a06c90", "#098876", "#a9f1e6" ]);
 
-          //gender = pickRandom(['male','female']);
-          gender = 'male';
+          gender      = pickRandom(['male','female']);
           nationality = pickRandom(NATIONALITY); // todo shouldn't be global
-
-          religion = pickRandom(RELIGION);
+          religion    = pickRandom(RELIGION);
 
           if ((nationality !== 'israeli' && nationality !== 'jew' && (religion === 'jewish' || religion === 'orthodox jewish')) || (nationality !== 'desi' && (religion === 'hindu' || religion === 'sikh')))
             religion = 'atheist';
@@ -642,7 +664,16 @@
 
           ctx.clearRect(0, 0, 100, 100);
           images.forEach(function(value, key) {
-            if (key == 'beard' && religion === 'sikh') {
+            if (gender === 'female' && (key === 'base' || key === 'detail' || key === 'mouth' || key === 'stache' || key === 'beard' )) 
+              return 0;
+            if (gender === 'male' && (key === 'girlbase' || key === 'girldetail' || key === 'girlmouth' || key === 'girlmouth' || key === 'girleyes' )) 
+              return 0;
+            if (gender === 'female' && (key === 'girlmouth' || key === 'girleyes')) {
+              draw(pickRandom(value), { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
+              return 0;
+            }
+
+            if (key === 'beard' && religion === 'sikh') {
               draw(value[9], hairShift);
               return 0;
             } else if ((key == 'beard') && (religion === 'orthodox jewish' || religion === 'sikh')) {
@@ -661,7 +692,7 @@
               return 0;
             }
 
-            if ((key == 'hair') && (Math.random() > 0.7) && religion !== 'sikh' && nationality !== 'saudi')
+            if ((key == 'hair') && (Math.random() > 0.7) && religion !== 'sikh' && nationality !== 'saudi' && religion !== 'orthodox jewish' && gender !== 'female')
               return 0;
             if ((key == 'detail') && Math.random() > 0.5)
               return 0;
@@ -672,18 +703,20 @@
             if ((key == 'beard' || key == 'stache') && nationality == 'viet')
               return 0;
 
-            if ((nationality === 'palestinian' || nationality === 'arab') && (key === 'hair'))
+            if ((nationality === 'palestinian' || nationality === 'arab') && gender === 'male' && key === 'hair')
               draw(value[27], hairShift);
-            else if ((nationality === 'saudi' || nationality === 'bedouin') && key === 'hair')
+            else if ((nationality === 'saudi' || nationality === 'bedouin') && gender === 'male' && key === 'hair')
               draw(value[27]);
-            else if (religion === 'sikh' && key === 'hair')
+            else if (religion === 'sikh' && gender === 'male' && key === 'hair')
               draw(value[28], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
-            else if (religion === 'orthodox jewish' && key === 'hair')
+            else if (religion === 'orthodox jewish' && gender === 'male' && key === 'hair')
               draw(value[29], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
             else if ((key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
               draw(pickRandom(value), hairShift);
-            else if (key == 'hair')
+            else if (key == 'hair' && gender === 'male')
               draw(pickRandomBetween(value, 0, 26), hairShift);
+            else if (key == 'hair' && gender === 'female')
+              draw(pickRandomBetween(value, 0, 25), hairShift);
             else if (black && (key === 'base'))
               draw(value[6]);
             else if ((nationality === 'mexican' || nationality === 'indonesian' || nationality === 'cuban' || nationality === 'gypsy' || nationality === 'colombian' || nationality === 'palestinian') && (key === 'base'))
