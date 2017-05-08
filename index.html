@@ -571,9 +571,10 @@
         images.set('girleyes',   new Array(2));
         images.set('brows',      new Array(6));
         images.set('shirt',      new Array(8));
+        images.set('hair',       new Array(32));
         images.set('beard',      new Array(12));
         images.set('stache',     new Array(6));
-        images.set('hair',       new Array(30));
+        images.set('hair',       new Array(32));
 
         var imagesToLoad = 0;
         
@@ -711,6 +712,10 @@
               draw(value[27], hairShift);
             else if ((nationality === 'saudi' || nationality === 'bedouin') && gender === 'male' && key === 'hair')
               draw(value[27]);
+            else if ((nationality === 'saudi' || nationality === 'bedouin') && gender === 'female' && key === 'hair')
+              draw(value[31]);
+            else if ((nationality === 'arab' || nationality === 'palestinian' || nationality === 'egyptian' || nationality === 'algerian' || nationality === 'indonesian') && gender === 'female' && key === 'hair') 
+              draw(value[30], { h: randomBetween(-1,1), s: randomBetween(-1,-.5), l:randomBetween(-.5,.4) });
             else if (religion === 'sikh' && gender === 'male' && key === 'hair')
               draw(value[28], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
             else if (religion === 'orthodox jewish' && gender === 'male' && key === 'hair')
@@ -721,9 +726,9 @@
               draw(pickRandomBetween(value, 0, 26), hairShift);
             else if (key == 'hair' && gender === 'female')
               draw(pickRandomBetween(value, 0, 25), hairShift);
-            else if (black && (key === 'base'))
+            else if (black && (key.indexOf('base') > -1))
               draw(value[6]);
-            else if ((nationality === 'mexican' || nationality === 'indonesian' || nationality === 'cuban' || nationality === 'gypsy' || nationality === 'colombian' || nationality === 'palestinian') && (key === 'base'))
+            else if ((nationality === 'mexican' || nationality === 'indonesian' || nationality === 'cuban' || nationality === 'gypsy' || nationality === 'colombian' || nationality === 'palestinian') && (key.indexOf('base') > -1))
               draw(pickRandomBetween(value, 2, 5));
             else if ((nationality === 'ethiopian') && (key === 'nose'))
               draw(value[2]);
@@ -733,15 +738,15 @@
               draw(value[6]);
             else if ((black || nationality === 'mongol' || nationality === 'filipino' || nationality === 'viet') && (key === 'nose'))
               draw(value[3]);
-            else if ((nationality === 'greek' || nationality === 'turk' || nationality === 'armenian' || nationality === 'filipino' || nationality === 'macedonian') && (key === 'base'))
+            else if ((nationality === 'greek' || nationality === 'turk' || nationality === 'armenian' || nationality === 'filipino' || nationality === 'macedonian') && (key.indexOf('base') > -1))
               draw(value[3]);
-            else if ((nationality === 'indonesian' || nationality === 'bedouin' || nationality === 'algerian' || nationality === 'aramean' || nationality === 'desi') && (key === 'base'))
+            else if ((nationality === 'indonesian' || nationality === 'bedouin' || nationality === 'algerian' || nationality === 'aramean' || nationality === 'desi') && (key.indexOf('base') > -1))
               draw(value[5]);
-            else if ((nationality === 'korean' || nationality === 'mongol' || nationality === 'viet') && (key === 'base'))
+            else if ((nationality === 'korean' || nationality === 'mongol' || nationality === 'viet') && (key.indexOf('base') > -1))
               draw(value[1]);
-            else if (poc && (key === 'base'))
+            else if (poc && (key.indexOf('base') > -1))
               draw(pickRandomBetween(value, 1, 6));
-            else if (key === 'base')
+            else if (key === 'base' || key === 'girlbase')
               draw(value[0]);
             else
               draw(pickRandom(value));
