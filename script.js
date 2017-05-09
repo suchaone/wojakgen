@@ -110,7 +110,7 @@ window.onload = function() {
     var TATLOC = [ 'chest', 'back', 'shoulder', 'thigh', 'ass', 'bicep' ];
     var TATTOO = [ 'has a tattoo of CELEBRITY on his TATLOC', 'has CELEBRITY tattood on his TATLOC', 'has a tattoo of a BEAST on his TATLOC', 'has a tattoo of a BEAST playing the INSTRUMENT on his TATLOC', 'has a tattoo of CELEBRITY playing the INSTRUMENT on his TATLOC', 'has a CELEBRITY calaca tattooed on his TATLOC', 'has a chibi CELEBRITY tattooed on his TATLOC', 'has a ADJECTIVE BEAST tattooed on his TATLOC', 'FAMED for his CELEBRITY tattoo' ];
     var SKILL  = [ 'cooking', 'baking', 'painting', 'programming', 'writing', 'weaving', 'singing', 'playing the INSTRUMENT', 'GAME', 'drawing', 'shitposting', 'blogging', 'tweeting', 'sewing', 'talking to PEOPLE', 'dancing', 'hacking', 'bodybuilding', 'ux design', 'trolling', 'game design', 'photoshop', 'illustrator', 'working out', 'BEAST taming', 'BEAST tending', 'BEAST breeding' ];
-    var LEVEL  = [ 'knows nothing about', 'knows about', 'familiar with', 'tried his hand at', 'sucks at', 'adequate at', 'competent at', 'good at', 'expert in', 'master of', 'grandmaster of' ];
+    var LEVEL  = [ 'knows nothing about', 'knows about', 'familiar with', 'tried his hand at', 'sucks at', 'adequate at', 'competent at', 'good at', 'expert at', 'master of', 'grandmaster of' ];
 
     
     //[ 'owns a ITEM', 'has a ITEM', 'bought a ITEM', 'desires a ITEM', 'stole a ITEM', 'stole a ITEM from a NATIONALITY', 'stole a ITEM from a NATIONALITY BOSS', 'stole a ITEM from a BOSS','stole a ITEM from a ADJECTIVE BOSS', 'bought a ITEM from a NATIONALITY'],
@@ -573,8 +573,11 @@ window.onload = function() {
         return 0;
       } else if (gender === 'male' && (key === 'girlbase' || key === 'girldetail' || key === 'girlmouth' || key === 'girlmouth' || key === 'girleyes' )) {
         return 0;
-      } else if (gender === 'female' && (key === 'girlmouth' || key === 'girleyes')) {
+      } else if (gender === 'female' && key === 'girlmouth') {
         draw(pickRandom(value), { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) });
+        return 0;
+      } else if (gender === 'female' && key === 'girleyes') {
+        draw(pickRandom(value), { h: randomBetween(-.7,-.15), s: randomBetween(-1,0), l:randomBetween(-.5,.2) });
         return 0;
       } else if (key === 'beard' && religion === 'sikh') {
         draw(value[9], hairShift);
@@ -620,8 +623,10 @@ window.onload = function() {
         draw(value[28], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) }); // turban
       else if (religion === 'orthodox jewish' && gender === 'male' && key === 'hair')
         draw(value[29], { h: randomBetween(-1,1), s: randomBetween(-1,.5), l:randomBetween(-.5,.2) }); // kippah
-      else if ((key == 'beard') || (key == 'stache') || (key == 'eyes')) //todo eyes should have their own shift
+      else if ((key == 'beard') || (key == 'stache')) //todo eyes should have their own shift
         draw(pickRandom(value), hairShift);
+      else if (key === 'eyes') 
+        draw(pickRandom(value), { h: randomBetween(-.7,-.15), s: randomBetween(-1,0), l:randomBetween(-.5,.2) });
       else if (key == 'hair' && gender === 'male')
         draw(pickRandomBetween(value, 0, 26), hairShift);
       else if (key == 'hair' && gender === 'female')
