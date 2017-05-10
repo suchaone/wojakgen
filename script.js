@@ -481,7 +481,7 @@ window.onload = function() {
   images.set('eyes',       new Array(5));
   images.set('girleyes',   new Array(2));
   images.set('brows',      new Array(6));
-  images.set('shirt',      new Array(8));
+  images.set('shirt',      new Array(9));
   images.set('hair',       new Array(32));
   images.set('beard',      new Array(12));
   images.set('stache',     new Array(6));
@@ -649,6 +649,8 @@ window.onload = function() {
         draw(value[5]);
       else if ((nationality === 'korean' || nationality === 'mongol' || nationality === 'viet') && (key.indexOf('base') > -1))
         draw(value[1]);
+      else if ((nationality === 'russian' || nationality === 'ukrainian') && key === 'shirt')
+        draw(value[8]);
       else if (poc && (key.indexOf('base') > -1))
         draw(pickRandomBetween(value, 1, 6));
       else if (key === 'base' || key === 'girlbase')
