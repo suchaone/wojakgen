@@ -220,8 +220,8 @@ window.onload = function() {
       form = form.replace(/^a (?=[aeiou])/,'an ');
     }
     if (gender === 'female') {
-      form = form.replace(' his ', ' her '); //todo: all instances
-      form = form.replace(' he ', ' she '); //todo: all instances
+      form = form.replace(/his /g, 'her '); //todo: all instances
+      form = form.replace(/ he /, ' she '); //todo: all instances
       form = form.replace('filipino', 'filipina');
     }
 
