@@ -36,9 +36,54 @@ window.onload = function() {
   function makeTulpa (x, y, name, tagline) {
     var tulpa = {};
     tulpa.position = makePoint (x, y);
-    tulpa.memes = [];
-    tulpa.skills = [];
-    tulpa.tulpas = [];
+    tulpa.memes = []; // todo
+    tulpa.skills = []; // todo
+    tulpa.tulpas = []; //todo
+    tulpa.relationships = [];
+    tulpa.mood = {
+      lonely:    randomBetween(0,100),
+      hungry:    randomBetween(0,100),
+      anxious:   randomBetween(0,100),
+      depressed: randomBetween(0,100),
+      curious:   randomBetween(0,100),
+      energetic: 100 
+    }
+    tulpa.shiftMood = function (mood, amount) {
+      this.mood[mood] += amount;
+      if (this.mood[mood] < 0)
+        this.mood[mood] = 0;
+      else if (this.mood[mood] > 100)
+        this.mood[mood] = 100;
+    }
+
+    tulpa.shiftPosition = function (amount) {
+      var CHARSIZE = 50; 
+      var point = this.position.add(amount);
+      if (point.y < 0)
+        point.y = 0;
+      if (point.y + CHARSIZE > $(window).height())
+        point.y = $(window).height() - CHARSIZE;
+      if (point.x < 0)
+        point.x = 0;
+      if (point.x + CHARSIZE > $(window).width())
+        point.x = $(window).width() - CHARSIZE;
+      this.position = point;
+    }
+
+    tulpa.findNearest = function(tulpas) {
+      var nearestTulpa = tulpas[0];
+      var nearestDist= 9999999;
+      var dist;
+      for (var i = 0; i < tulpas.length; i++) {
+        dist = this.position.distanceTo(tulpas[i].position);
+        if (dist < nearestDist && tulpas[i] !== this) {
+          nearestDist = dist;
+          nearestTulpa = tulpas[i];
+        }
+      }
+      return nearestTulpa;
+    }
+
     tulpa.name = name;
     tulpa.tagline = tagline;
     tulpa.gender = gender;
@@ -526,7 +571,16 @@ window.onload = function() {
   }
 
   function makePoint (x, y) {
-    return { x: x, y: y };
+    var point = {};
+    point.x = x,
+    point.y = y,
+    point.add = function(p) { return makePoint (this.x + p.x, this.y + p.y); };
+    point.neg = function() { return makePoint (-this.x, -this.y) };
+    point.distanceTo = function(p) { return Math.sqrt(Math.pow(this.x - p.x, 2) + Math.pow(this.y - p.y, 2)) };
+    point.unitVector = function() { return makePoint(this.x / this.hyp(), this.y / this.hyp()); };
+    point.multiply = function(n) { return makePoint (this.x * n, this.y * n) };
+    point.hyp = function() { return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2)); }
+    return point;
   }
 
   var images = new Map();
@@ -814,19 +868,77 @@ window.onload = function() {
     return [h, s, l];
   }
 
+
   document.getElementById("not").onclick = generateFace;
 
   document.getElementById("hot").onclick = function() {
-    tulpas.push(makeTulpa(Math.random() * 10, Math.random() * 10, name, tagline, gender, nationality, religion));
+    tulpas.push(makeTulpa(randomBetween(0, $(window).width()), randomBetween(0, $(window).height()), name, tagline, gender, nationality, religion));
     $("#canvas").appendTo("#accepted").attr("id","tulpa-" + tulpas.length).on("click",function() {
       $("#char-name").html(tulpas[  parseInt($(this).attr("id").split("-")[1]) - 1 ].name);
       $("#char-attribute").html(tulpas[  parseInt($(this).attr("id").split("-")[1]) - 1 ].tagline);
       $("#canvas").detach();
       $(this).attr("id","canvas").prependTo("#char");
     });
+
+    if (tulpas.length > 3)
+      $("#play").show();
+
     $("#char").prepend('<canvas id="canvas" width=100 height=100 style="display:none;"></canvas>');
-    console.log(tulpas);
     generateFace();
+  }
+
+  document.getElementById("play").onclick = function() {
+    alert("Starting simulation. This is highly experimental and does not work well.");
+    $("#char").fadeOut(500, function() {
+      $("#accepted").addClass("board");
+      $("#accepted canvas").css({ "display": "block", "position": "absolute" }).off("click").on("click", function() {
+        var tulpa = tulpas[parseInt($(this).attr("id").split("-")[1]) - 1 ];
+        console.log(tulpa.mood);
+      });
+      tick();
+      for (var i = 0; i < tulpas.length; i++) {
+        $("#tulpa-" + (i + 1)).css({ "top": tulpas[i].position.y, "left": tulpas[i].position.x });
+      }
+    });
+
+    function tick () {
+      for (var i = 0; i < tulpas.length; i++) {
+        var tulpa = tulpas[i];
+        if (tulpa.mood.energetic > 10) {
+          var delta = makePoint (0,0);
+          if (tulpa.mood.lonely > 80) {
+            //walk towards nearest neighbor
+            var delta = tulpa.position.add(tulpa.findNearest(tulpas).position.neg()).neg().unitVector().multiply(tulpa.mood.energetic / 10);
+          } else if (tulpa.mood.lonely < 20) {
+            //walk away from nearest neighbor
+            var delta = tulpa.position.add(tulpa.findNearest(tulpas).position.neg()).unitVector().multiply(tulpa.mood.energetic / 10);
+          } else if (tulpa.mood.curious > 50) {
+            var delta = makePoint (randomBetween(-100,100) * (tulpa.mood.energetic / 100), randomBetween(-100,100) * (tulpa.mood.energetic / 100));
+          } else {
+            var delta = makePoint (0,0);
+            tulpa.shiftMood('lonely', randomBetween(0,10));
+            tulpa.shiftMood('curious', randomBetween(0,10));
+            tulpa.shiftMood('energetic', randomBetween(0,20));
+          }
+          if (tulpa.position.distanceTo(tulpa.findNearest(tulpas).position) < 80)
+            tulpa.shiftMood('lonely', randomBetween(-10,0));
+
+          if (delta.x < 0) 
+            $("#tulpa-" + (i + 1)).addClass("flipped");
+          else
+            $("#tulpa-" + (i + 1)).removeClass("flipped");
+          tulpa.shiftPosition(delta);
+          tulpa.shiftMood('curious', randomBetween(-1,0));
+          tulpa.shiftMood('energetic', -delta.hyp() / 5);
+        } else {
+          tulpa.shiftMood('energetic', randomBetween(0,20));
+        }
+
+        $("#tulpa-" + (i + 1)).css({ "top": tulpa.position.y, "left": tulpa.position.x });
+
+      }
+      setTimeout(tick, 1000);
+    }
   }
 
 }
