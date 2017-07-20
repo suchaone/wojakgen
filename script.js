@@ -887,6 +887,8 @@ window.onload = function() {
     generateFace();
   }
 
+  /*
+
   document.getElementById("play").onclick = function() {
     alert("Starting simulation. This is highly experimental and does not work well.");
     $("#char").fadeOut(500, function() {
@@ -940,5 +942,7 @@ window.onload = function() {
       setTimeout(tick, 1000);
     }
   }
+
+  */
 
 }
