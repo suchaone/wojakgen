@@ -880,8 +880,8 @@ window.onload = function() {
       $(this).attr("id","canvas").prependTo("#char");
     });
 
-    if (tulpas.length > 3)
-      $("#play").show();
+    //if (tulpas.length > 3)
+    //  $("#play").show();
 
     $("#char").prepend('<canvas id="canvas" width=100 height=100 style="display:none;"></canvas>');
     generateFace();
