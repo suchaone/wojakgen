@@ -4,26 +4,31 @@
 }
 
 #char-name {
-  font-size: 20px;
+  font-size: 21px;
+  font-weight: bold;
   margin-top: 30px;
   margin-bottom: 10px;
-  letter-spacing: .1em;
 }
 
 #char-attribute {
-  font-style: italic;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 #accepted {
   margin-top: 30px;
-  text-align: center;
+  width: 590px;
+  margin: auto;
+  border: 1px solid black;
+  border-bottom: none;
+  background: #1c2937;
 }
 
 #accepted canvas {
   width: 50px;
   height: 50px;
-  margin: 5px;
+  margin-right: 10px;
+  float: left;
 }
 
 button {
@@ -34,7 +39,7 @@ button {
   font-weight: bold;
   font-size: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 200px;
   border-bottom: 3px solid black;
   cursor: pointer;
   display: inline-block;
@@ -64,14 +69,16 @@ button:active {
 }
 
 body {
-  background: #f5f4ea;
+  background: #141d26;
+  color: white;
   margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 canvas {
   border-radius: 500px;
-  border: 2px solid #f5d8c4;
-  box-shadow: 0 3px 3px #9c5858;
   background: #bdb6b6;
 }
 
@@ -92,4 +99,26 @@ canvas {
   transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   -moz-transform: scaleX(-1);
+}
+
+.tweet {
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  min-height: 50px;
+  border-bottom: 1px solid black;
+  padding: 9px 12px;
+}
+
+.tweet:hover {
+  background: #141d26;
+  cursor: pointer;
+}
+
+
+.tweet a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: block;
 }
