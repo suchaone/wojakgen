@@ -589,8 +589,8 @@ window.onload = function() {
   images.set('base',       new Array(7));
   images.set('girlbase',   new Array(7));
   images.set('nose',       new Array(10));
-  images.set('mouth',      new Array(9));
-  images.set('girlmouth',  new Array(9));
+  images.set('mouth',      new Array(10));
+  images.set('girlmouth',  new Array(10));
   images.set('detail',     new Array(4));
   images.set('girldetail', new Array(1));
   images.set('eyes',       new Array(5));
