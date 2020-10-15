@@ -330,6 +330,10 @@ window.onload = function() {
   function pickRandomBetween(ar, min, max) {
     return ar[Math.round(randomBetween(min,max))];
   }
+  
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
 
   function randomChars(minLen, maxLen) {
     var str = "";
@@ -716,8 +720,8 @@ window.onload = function() {
     $("#char-attribute").html(tagline);
     $("#birthday").html(birthyear);
     $("#join-date").html(joinyear);
-    $("#followers").html(followers);
-    $("#following").html(following);
+    $("#followers").html(numberWithCommas(followers));
+    $("#following").html(numberWithCommas(following));
 
     // preset HSL offset ranges for various hair colors
     var hairColors = {
@@ -938,8 +942,8 @@ window.onload = function() {
       $("#char-attribute").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].tagline);
       $("#join-date").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].joinyear);
       $("#birthday").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].birthyear);
-      $("#followers").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].followers);
-      $("#following").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].following);
+      $("#followers").html(numberWithCommas(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].followers));
+      $("#following").html(numberWithCommas(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].following));
 
 
 
