@@ -95,6 +95,8 @@ window.onload = function() {
     tulpa.religion = religion;
     tulpa.birthyear = birthyear;
     tulpa.joinyear = joinyear;
+    tulpa.followers = followers;
+    tulpa.following = following;
     var name = generateName();
     return tulpa;
   }
@@ -942,6 +944,7 @@ window.onload = function() {
       $("#char-attribute").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].tagline);
       $("#join-date").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].joinyear);
       $("#birthday").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].birthyear);
+      console.log(z
       $("#followers").html(numberWithCommas(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].followers));
       $("#following").html(numberWithCommas(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].following));
 
