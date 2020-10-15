@@ -705,8 +705,19 @@ window.onload = function() {
     tweet = generateTagline(tweetForms);
     console.log(tweet);
     name = generateName(nationality, gender);
+    
+    
+    birthyear = randomBetween(1965, 2002)
+    joinyear = randomBetween(2008,2020)
+    followers = randomBetween(0,2500)
+    following = randomBetween(0,2500)
+    
     $("#char-name").html(name);
     $("#char-attribute").html(tagline);
+    $("#birthday").html(birthyear);
+    $("#join-date").html(joinyear);
+    $("#followers").html(followers);
+    $("#following").html(following);
 
     // preset HSL offset ranges for various hair colors
     var hairColors = {
@@ -916,7 +927,8 @@ window.onload = function() {
   document.getElementById("not").onclick = generateFace;
 
   document.getElementById("hot").onclick = function() {
-    tulpas.push(makeTulpa(randomBetween(0, $(window).width()), randomBetween(0, $(window).height()), name, tagline, gender, nationality, religion, randomBetween(1965, 2002) , randomBetween(2008,2020), randomBetween(0,2500), randomBetween(0,2500)));
+    // (x, y, name, tagline, birthyear, joinyear, followers, following)
+    tulpas.push(makeTulpa(randomBetween(0, $(window).width()), randomBetween(0, $(window).height()), name, tagline, birthyear, joinyear, followers, following));
     var $tweet = $("<div class='tweet'>");
     $("#canvas").appendTo($tweet).attr("id","tulpa-" + tulpas.length).on("click",function() {
     });
