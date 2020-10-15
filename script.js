@@ -707,10 +707,10 @@ window.onload = function() {
     name = generateName(nationality, gender);
     
     
-    birthyear = randomBetween(1965, 2002)
-    joinyear = randomBetween(2008,2020)
-    followers = randomBetween(0,2500)
-    following = randomBetween(0,2500)
+    birthyear = Math.floor(randomBetween(1965, 2002))
+    joinyear = Math.floor(randomBetween(2008,2020))
+    followers = Math.floor(randomBetween(0,2500))
+    following = Math.floor(randomBetween(0,2500))
     
     $("#char-name").html(name);
     $("#char-attribute").html(tagline);
