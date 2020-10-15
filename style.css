@@ -3,6 +3,10 @@
   margin: 60px;
 }
 
+#canvas {
+  width: 142px;
+}
+
 #char-name {
   font-size: 21px;
   font-weight: bold;
