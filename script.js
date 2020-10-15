@@ -924,6 +924,9 @@ window.onload = function() {
       $canvas = $(this).children("canvas");
       $("#char-name").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].name);
       $("#char-attribute").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].tagline);
+      $("#join-date").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].joinyear);
+      $("#birthday").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].birthyear);
+
       //$("#canvas").detach();
       //$canvas.attr("id","canvas").prependTo("#char");
       var data = $canvas[0].getContext('2d').getImageData(0, 0, $canvas[0].width, $canvas[0].height);
