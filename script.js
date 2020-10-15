@@ -37,7 +37,7 @@ window.onload = function() {
 
   // a collection of characters that have been loved by the user
   var tulpas = [];
-  function makeTulpa (x, y, name, tagline, birthyear, joinyear) {
+  function makeTulpa (x, y, name, tagline, birthyear, joinyear, followers, following) {
     var tulpa = {};
     tulpa.position = makePoint (x, y);
     tulpa.memes = []; // todo
@@ -916,7 +916,7 @@ window.onload = function() {
   document.getElementById("not").onclick = generateFace;
 
   document.getElementById("hot").onclick = function() {
-    tulpas.push(makeTulpa(randomBetween(0, $(window).width()), randomBetween(0, $(window).height()), name, tagline, gender, nationality, religion, randomBetween(1965, 2002) , randomBetween(2008,2020)  ));
+    tulpas.push(makeTulpa(randomBetween(0, $(window).width()), randomBetween(0, $(window).height()), name, tagline, gender, nationality, religion, randomBetween(1965, 2002) , randomBetween(2008,2020), randomBetween(0,2500), randomBetween(0,2500)));
     var $tweet = $("<div class='tweet'>");
     $("#canvas").appendTo($tweet).attr("id","tulpa-" + tulpas.length).on("click",function() {
     });
@@ -926,6 +926,10 @@ window.onload = function() {
       $("#char-attribute").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].tagline);
       $("#join-date").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].joinyear);
       $("#birthday").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].birthyear);
+      $("#followers").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].followers);
+      $("#following").html(tulpas[  parseInt($canvas.attr("id").split("-")[1]) - 1 ].following);
+
+
 
       //$("#canvas").detach();
       //$canvas.attr("id","canvas").prependTo("#char");
