@@ -52,11 +52,15 @@ button {
 #hot {
   border: 1px solid #84ef85;
   background: none;
+  font-weight: bold;
+  color: #84ef85;
 }
 
 #not {
   border: 1px solid #ff5e5e;
   background: none;
+  font-weight: bold;
+  color: #ff5e5e;
 }
 
 button:hover {
