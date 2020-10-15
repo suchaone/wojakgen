@@ -93,8 +93,8 @@ window.onload = function() {
     tulpa.gender = gender;
     tulpa.nationality = nationality;
     tulpa.religion = religion;
-    tulpa.age = age;
-    tulpa.birthday = birthday;
+    tulpa.birthyear = birthyear;
+    tulpa.joinyear = joinyear;
     var name = generateName();
     return tulpa;
   }
