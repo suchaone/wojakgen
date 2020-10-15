@@ -18,6 +18,10 @@
   font-weight: bold;
 }
 
+#followers {
+  margin-left: 10px;
+}
+
 #char-attribute {
   margin-bottom: 10px;
   font-size: 15px;
