@@ -50,13 +50,13 @@ button {
 }
 
 #hot {
-  background: #84ef85;
-  border-bottom-color: #468646;
+  border: 1px solid #84ef85;
+  background: none;
 }
 
 #not {
-  background: #ff5e5e;
-  border-bottom-color: #bd2c2c;
+  border: 1px solid #ff5e5e;
+  background: none;
 }
 
 button:hover {
